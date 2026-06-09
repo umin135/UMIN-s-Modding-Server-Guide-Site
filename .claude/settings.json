@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"a:\\\\Z_GitProjects\\\\UMIN-s-Modding-Server-Guide-Site\\\\\" | head -100)",
+      "Read(//a/Z_GitProjects/**)"
+    ]
+  }
+}
