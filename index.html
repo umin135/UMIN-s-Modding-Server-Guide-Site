@@ -1,23 +1,130 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>UMIN 모딩 서버 가이드</title>
-  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"><link rel="stylesheet" href="./style.css">
-
+  <title>UMIN 커미션 가이드</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.15rem;
+      margin: 2rem 0 0.5rem;
+      text-shadow: 0.15rem 0.15rem 0 rgba(77, 73, 62, 0.25);
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      margin: 1.5rem 0 0.4rem;
+    }
+    p {
+      margin: 0.5rem 0;
+      line-height: 1.75;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+      margin: 0.5rem 0;
+    }
+    li {
+      margin: 0.4rem 0;
+      line-height: 1.75;
+    }
+    blockquote {
+      border-left: 3px solid #4D493E;
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      background-color: rgba(77, 73, 62, 0.08);
+    }
+    blockquote p {
+      margin: 0.2rem 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid rgba(77, 73, 62, 0.4);
+      margin: 1.5rem 0;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 0.8rem 0;
+    }
+    th, td {
+      border: 1px solid rgba(77, 73, 62, 0.4);
+      padding: 0.45rem 0.8rem;
+      text-align: left;
+      line-height: 1.6;
+    }
+    th {
+      background-color: rgba(77, 73, 62, 0.12);
+      font-weight: 500;
+    }
+    a {
+      color: #4D493E;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(77, 73, 62, 0.5);
+    }
+    a:hover {
+      text-decoration-color: #4D493E;
+    }
+    .doc-button-area {
+      margin-bottom: 2rem;
+    }
+    .faq-q {
+      margin-top: 1.2rem;
+    }
+    .toc table {
+      width: auto;
+      min-width: 300px;
+      margin: 1.5rem 0 0;
+      border: 2px solid rgba(77, 73, 62, 0.6);
+      box-shadow: 3px 3px 0 rgba(77, 73, 62, 0.35);
+    }
+    .toc thead th {
+      background-color: rgba(77, 73, 62, 0.22);
+      text-align: center;
+      letter-spacing: 0.4rem;
+      font-size: 0.9rem;
+      padding: 0.4rem 1.2rem;
+      border-bottom: 2px solid rgba(77, 73, 62, 0.5);
+    }
+    .toc .toc-num {
+      white-space: nowrap;
+      font-weight: 500;
+      text-align: center;
+      width: 3.5rem;
+    }
+    .toc .toc-sub-num {
+      font-weight: 300;
+      color: rgba(77, 73, 62, 0.6);
+      font-size: 0.9em;
+    }
+    .toc .toc-sub-title {
+      padding-left: 1.8rem !important;
+      font-size: 0.93em;
+    }
+    .toc a {
+      text-decoration: none;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <header>
   <div class="pattern">
     <div class="container">
       <div class="pattern-inner"></div>
     </div>
   </div>
-  
+
   <div class="container">
     <h1>
-      <span><b>서버 가이드</b></span>
+      <span><b>커미션 가이드</b></span>
     </h1>
   </div>
 </header>
@@ -25,17 +132,308 @@
 <main>
   <div class="container">
     <div class="content">
-      <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'" ><b>서버 입장</b></button>
-      <br><br>
-      <img src="https://cdn.discordapp.com/attachments/1215048054621868032/1215062969814229022/Title_Welcome.png?ex=681e8112&is=681d2f92&hm=81c278060e66286b43179c7e99a8540a117853cf6a468fa73e150179825f84d9&" width="600px"><br>
-      <br><br>
-      <button type="button" onclick="location.href='./CheckPoint.html'" ><b>나의 레벨/포인트 확인 방법</b></button>
-      <br><br>
-      <button type="button" onclick="location.href='./EarnPoint.html'" ><b>포인트(경험치) 획득 방법</b></button>
-      <br><br>
-      
-      <!-- <button type="button" onclick="location.href='./GiftPoint.html'" >포인트 선물</button> -->
-      <!-- <br><br> -->
+
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>서버 입장</b></button>
+      </div>
+
+      <nav class="toc">
+        <table>
+          <thead>
+            <tr><th colspan="2">목 차</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="toc-num">1</td>
+              <td><a href="#1-커미션-전제조건">커미션 전제조건</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num">2</td>
+              <td><a href="#2-해줄-수-없는-것">해줄 수 없는 것</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num">3</td>
+              <td><a href="#3-커미션-금액">커미션 금액</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num">4</td>
+              <td><a href="#4-커미션-신청대기열-방식">커미션 신청/대기열 방식</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num toc-sub-num">4.1</td>
+              <td class="toc-sub-title"><a href="#41-배경-왜-바뀌나요">배경 (왜 바뀌나요?)</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num toc-sub-num">4.2</td>
+              <td class="toc-sub-title"><a href="#42-용어-정리">용어 정리</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num toc-sub-num">4.3</td>
+              <td class="toc-sub-title"><a href="#43-새-대기열-운영-규칙">새 대기열 운영 규칙</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num toc-sub-num">4.4</td>
+              <td class="toc-sub-title"><a href="#44-우선순위-결정-방식">우선순위 결정 방식</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num toc-sub-num">4.5</td>
+              <td class="toc-sub-title"><a href="#45-기존-대기열-우선순위-혜택">기존 대기열 우선순위 혜택</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num toc-sub-num">4.6</td>
+              <td class="toc-sub-title"><a href="#46-운영-주기">운영 주기</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num toc-sub-num">4.7</td>
+              <td class="toc-sub-title"><a href="#47-예시">예시</a></td>
+            </tr>
+            <tr>
+              <td class="toc-num toc-sub-num">4.8</td>
+              <td class="toc-sub-title"><a href="#48-자주-묻는-질문-faq">자주 묻는 질문 (FAQ)</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </nav>
+
+      <blockquote>
+        <p>이 문서는 커미션의 전제조건, 작업 불가능 범위, 가격, 그리고 신청 및 대기열 운영 방식을 설명합니다.</p>
+        <p>커미션을 요청하기 전에 한 번 읽어주시면 진행이 훨씬 수월합니다.</p>
+      </blockquote>
+
+      <hr>
+
+      <h2 id="1-커미션-전제조건">1. 커미션 전제조건</h2>
+      <ul>
+        <li>모든 커미션 MOD는 항상 저의 패트리온에서 릴리즈되는 다른 모드와 <strong>동일하게 배포</strong>됩니다.<br>
+          즉, <strong>비공개 커미션은 불가능</strong>합니다. 항상 모든 커미션은 공개로 사전 릴리즈된 후, 추후 공개 릴리즈로 전환되는 방식으로 동일하게 작동합니다.</li>
+        <li><strong>NSFW 모드는 작업해드릴 수 없습니다.</strong><br>
+          데드 오어 얼라이브, 혹은 퍼스트 디센던트 수준의 노출까지만 허용합니다.<br>
+          남성 혹은 여성의 생식기 묘사는 <strong>무슨 일이 있어도 불가능</strong>합니다.<br>
+          (여담으로, 과한 NSFW 묘사는 한국에서는 범죄행위이기도 합니다.)</li>
+      </ul>
+
+      <hr>
+
+      <h2 id="2-해줄-수-없는-것">2. 해줄 수 없는 것</h2>
+
+      <h3 id="얼굴-모드">표정이 작동하는 얼굴 모드는 만들어 드릴 수 없습니다.</h3>
+      <blockquote>
+        <p>저는 얼굴 모딩을 할 줄 알지만, 이것을 안정적으로 커미션으로서 작업해드릴 수 있는 워크플로우가 마련되지 않았습니다.</p>
+        <p>얼굴 모딩은 항상 실험적이며, 저는 이걸로 돈을 받고 해드릴 수준의 실력이 되지 못합니다.</p>
+      </blockquote>
+
+      <h3 id="새로운-디자인">완전히 새로운 디자인은 만들어 드릴 수 없습니다.</h3>
+      <blockquote>
+        <p>컨셉아트만 존재하는 복장이나 커스텀 디자인은 해드릴 수 없습니다. 최소한 다른 게임에서 얻을 수 있는 <strong>추출된 모델</strong>이 필요합니다.</p>
+        <p>하지만 추출된 모델을 직접 제공하실 필요는 없습니다. 저는 항상 커미션 요청에 적합한 추출 방안을 직접 모색하고 추출하는 편이니, <strong>해당 모델의 존재 유무만 정확하게 판단</strong>해주시면 됩니다.</p>
+      </blockquote>
+
+      <h3 id="hair-mod">만들어드릴 수 있는 Hair Mod는 매우 한정적입니다.</h3>
+      <blockquote>
+        <p>Stellar Blade나 Mortal Kombat 1처럼 비교적 최근 게임에서 쓰이는 <strong>Haircard 방식</strong>으로 만들어진 메쉬가 있다면 최대한 멋지게 만들어드릴 수 있습니다.</p>
+        <p>하지만 철권7이나 DOA5/6와 같이 구식 Hair Card 방식의 Hair는 완전히 새롭게 Hair 메쉬를 디자인해야 하기 때문에 너무 많은 시간이 소요되고, 제가 돈을 받고 완성시켜드릴 자신이 없습니다.</p>
+        <p>그러니 당신의 커미션에 대해 저와 이야기할 때 꼭 숙지해주세요.</p>
+      </blockquote>
+
+      <h3 id="스테이지-모드">지금은 스테이지 모드는 만들어 드릴 수 없습니다.</h3>
+      <blockquote>
+        <p>저에게 스테이지 모딩은 아직 실험 중인 것이 많고 공부해야 할 것이 많습니다.</p>
+        <p>대신 <strong>스테이지 커미션을 따로 오픈할 예정</strong>이니, 그전까지는 스테이지 커미션은 받지 않습니다.</p>
+      </blockquote>
+
+      <hr>
+
+      <h2 id="3-커미션-금액">3. 커미션 금액</h2>
+      <ul>
+        <li>일반적으로 <strong>복장/캐릭터 모드 기준 3~4만원</strong>이며, 작업 방식·기간에 따라 변동될 수 있습니다.</li>
+        <li>정확한 가격은 예상 제작 기간·방식을 감안해 <strong>미리 정해드립니다.</strong></li>
+        <li>결제는 항상 <strong>해당 작업이 절반 이상 완료되었다고 판단될 때</strong> 이루어집니다.</li>
+      </ul>
+
+      <hr>
+
+      <h2 id="4-커미션-신청대기열-방식">4. 커미션 신청/대기열 방식</h2>
+      <p>기존 커미션 대기열이 과도하게 길어지면서 처리에 어려움이 생겼습니다.<br>
+      이를 정리하기 위해 <strong>짧게 유지되는 새 대기열</strong> 방식으로 전환합니다.</p>
+
+      <blockquote>
+        <p><strong>핵심 원칙:</strong> 기존 대기열의 우선순위는 <strong>무엇보다 우선합니다.</strong></p>
+        <p>기존 대기열에 등록된 분은, 신청 순서와 관계없이 <strong>항상 신규 신청자보다 앞 순위</strong>를 가집니다.</p>
+      </blockquote>
+
+      <p>핵심은 다음 두 가지입니다.</p>
+      <ul>
+        <li>한 번에 받는 대기열을 <strong>소수</strong>로 제한해 회전을 빠르게 합니다.</li>
+        <li>기존에 신청해주셨던 분들의 <strong>우선순위는 그대로 보장</strong>합니다.</li>
+      </ul>
+
+      <h3 id="41-배경-왜-바뀌나요">4.1 배경 (왜 바뀌나요?)</h3>
+      <ul>
+        <li>대기열이 너무 길어져 6개월~1년 이상 묵은 신청이 다수 남아 있습니다.</li>
+        <li>오래된 신청일수록 <strong>연락이 닿지 않는 경우</strong>가 많아, 순서대로 처리하려 해도 작업이 멈추는 일이 잦았습니다.</li>
+        <li>따라서 현재 신규 접수는 막아둔 상태이며, 앞으로는 아래의 새 방식으로 운영합니다.</li>
+      </ul>
+
+      <h3 id="42-용어-정리">4.2 용어 정리</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>용어</th>
+            <th>의미</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>기존 대기열</strong></td>
+            <td>이전 방식으로 접수되어 아직 처리되지 않은, 묵은 신청 목록. 삭제하지 않고 유지됩니다.</td>
+          </tr>
+          <tr>
+            <td><strong>새 대기열</strong></td>
+            <td>앞으로 실제 작업이 진행되는 짧은 대기열. 한 회차에 소수만 채택하며, 채택 인원은 회차마다 정해집니다.</td>
+          </tr>
+          <tr>
+            <td><strong>우선순위 혜택</strong></td>
+            <td>기존 대기열에 등록된 신청자가 새 대기열에서 더 앞 순위를 받는 혜택. 한 번 사용하면 소멸합니다.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 id="43-새-대기열-운영-규칙">4.3 새 대기열 운영 규칙</h3>
+      <ul>
+        <li>새 대기열은 <strong>소수의 슬롯</strong>만 운영합니다.</li>
+        <li>짧은 주기로 열고 닫으며 빠르게 회전시킵니다.</li>
+        <li>현재 진행 중인 작업이 모두 끝나면, 다음 회차를 다시 엽니다. (→ <a href="#46-운영-주기">4.6 운영 주기</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>참고 — 채택 인원은 고정값이 아닙니다.</strong></p>
+        <p>이 문서 곳곳에 나오는 "5개"는 어디까지나 <strong>예시</strong>입니다.</p>
+        <p>한 회차에 채택하는 인원(= 기각 기준)은 상황에 따라 <strong>2개, 3개 등으로 더 적게</strong> 정해질 수 있으며, 매 회차마다 그때그때 결정됩니다.</p>
+      </blockquote>
+
+      <h3 id="44-우선순위-결정-방식">4.4 우선순위 결정 방식</h3>
+      <p>새 대기열을 열고 신청을 받은 뒤, 다음 순서로 우선순위를 계산합니다.</p>
+
+      <p><strong>1단계 — 신청 순서로 기본 순위 부여</strong><br>
+      접수된 모든 신청에 대해, <strong>먼저 신청한 순서대로</strong> 기본 순위를 매깁니다.</p>
+
+      <p><strong>2단계 — 기존 대기열 우선순위 반영 (절대 우선)</strong><br>
+      신청자 중 <strong>기존 대기열에 등록되어 있던 분</strong>은, 신청 순서와 무관하게 <strong>모든 신규 신청자보다 위</strong>로 끌어올립니다.</p>
+
+      <ul>
+        <li>기존 대기열 보유자는 <strong>언제나 신규 신청자보다 앞 순위</strong>입니다.</li>
+        <li>기존 대기열 보유자끼리는 <strong>기존 대기열 순위</strong> 순으로 정렬됩니다.</li>
+        <li>신규 신청자끼리는 <strong>신청 순서</strong> 순으로 정렬됩니다.</li>
+      </ul>
+
+      <p>따라서 최종 순서는 항상 <strong>[기존 대기열 보유자 (기존 순위 순)] → [신규 신청자 (신청 순서 순)]</strong>가 됩니다.</p>
+
+      <p><strong>3단계 — 그 회차에 정한 인원만 채택</strong><br>
+      위 과정으로 정렬된 목록에서, <strong>해당 회차에 정한 채택 인원만</strong> 채택하고 나머지는 이번 회차에서는 기각됩니다.<br>
+      (채택 인원은 고정이 아니며 회차마다 다릅니다 → <a href="#43-새-대기열-운영-규칙">4.3 새 대기열 운영 규칙</a>의 참고 사항.)<br>
+      기각은 해당 회차 한정이며, 다음 회차에 다시 신청할 수 있습니다.</p>
+
+      <h3 id="45-기존-대기열-우선순위-혜택">4.5 기존 대기열 우선순위 혜택</h3>
+      <ul>
+        <li>기존 대기열에 있는 분은, 새 대기열에 신청할 때 <strong>앞 순위를 보장</strong>받습니다.</li>
+        <li>단, 이 혜택으로 <strong>새 대기열에 정상 등록되는 순간</strong>:
+          <ul>
+            <li>해당 신청자는 <strong>기존 대기열에서 삭제</strong>됩니다.</li>
+            <li><strong>우선순위 혜택도 함께 소멸</strong>합니다. (1회성)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>즉, 우선순위는 "기존 대기열에 머무는 동안 보장"되며, 새 대기열로 넘어오면 일반 신청자와 동일하게 취급됩니다.</p>
+
+      <h3 id="46-운영-주기">4.6 운영 주기</h3>
+      <ol>
+        <li>새 대기열을 엽니다.</li>
+        <li>신청을 받고, <a href="#44-우선순위-결정-방식">4.4 우선순위 결정 방식</a>에 따라 그 회차의 채택 인원을 정해 채택합니다.</li>
+        <li>채택된 작업을 진행합니다.</li>
+        <li>진행 중인 작업이 <strong>모두 마무리되면</strong>, 다시 1번으로 돌아가 새 대기열을 엽니다.</li>
+      </ol>
+      <p>이 과정을 반복하면서 기존 대기열도 자연스럽게 함께 소진됩니다.</p>
+
+      <h3 id="47-예시">4.7 예시</h3>
+      <blockquote>
+        <p>아래 예시는 그 회차의 채택 인원을 <strong>5개로 가정</strong>한 경우입니다.</p>
+        <p>앞서 설명했듯 이 숫자는 고정이 아니며, 회차에 따라 2개·3개 등으로 달라질 수 있습니다.</p>
+      </blockquote>
+
+      <p>새 대기열을 열고 <strong>10명(A~J)</strong>이 신청 순서대로 신청했다고 가정합니다.<br>
+      이 중 <strong>C, F, H</strong>가 기존 대기열에 등록되어 있었고, 기존 대기열 순위는 각각 <strong>C(1위) · F(2위) · H(5위)</strong>입니다.</p>
+
+      <p><strong>우선순위 계산 결과:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th style="text-align:center">최종 순위</th>
+            <th style="text-align:center">신청자</th>
+            <th>사유</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">C</td>
+            <td>기존 대기열 1위</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">2</td>
+            <td style="text-align:center">F</td>
+            <td>기존 대기열 2위</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">3</td>
+            <td style="text-align:center">H</td>
+            <td>기존 대기열 5위</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">4</td>
+            <td style="text-align:center">A</td>
+            <td>신규 신청 (가장 먼저 신청)</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">5</td>
+            <td style="text-align:center">B</td>
+            <td>신규 신청</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">6~</td>
+            <td style="text-align:center">D, E, G, I, J</td>
+            <td>신규 신청 — <strong>이번 회차 기각</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>처리 (채택 인원을 5개로 가정한 경우):</strong></p>
+      <ul>
+        <li>상위 5개 <strong>C, F, H, A, B</strong> 채택.</li>
+        <li>C·F·H는 새 대기열에 등록되었으므로 → <strong>기존 대기열에서 삭제 + 우선순위 혜택 소멸.</strong></li>
+        <li>D, E, G, I, J는 이번 회차 기각 (다음 회차 재신청 가능).</li>
+        <li>이 작업들이 모두 끝나면 → 다음 회차 대기열을 다시 엽니다.</li>
+      </ul>
+      <blockquote>
+        <p>만약 이 회차의 채택 인원이 <strong>3개</strong>였다면, 상위 3개인 <strong>C, F, H</strong>만 채택되고 A부터는 모두 기각됩니다.</p>
+      </blockquote>
+
+      <h3 id="48-자주-묻는-질문-faq">4.8 자주 묻는 질문 (FAQ)</h3>
+
+      <p class="faq-q"><strong>Q. 기존 대기열에 있는데, 새 대기열에 따로 신청해야 하나요?</strong></p>
+      <p>네. 기존 대기열에 있다는 사실만으로 자동 진행되지는 않습니다. 새 대기열이 열렸을 때 직접 신청하셔야 하며, 그때 우선순위 혜택이 적용됩니다.</p>
+
+      <p class="faq-q"><strong>Q. 이번 회차에서 기각되면 기존 대기열 우선순위도 사라지나요?</strong></p>
+      <p>아니요. <strong>새 대기열에 정상 등록될 때만</strong> 혜택이 소멸합니다. 기각된 경우에는 기존 대기열에 그대로 남아 있고, 다음 회차에 다시 혜택을 사용할 수 있습니다.</p>
+
+      <p class="faq-q"><strong>Q. 한 회차에 몇 명이나 받나요?</strong></p>
+      <p>고정되어 있지 않습니다. 상황에 따라 2~5개 등으로 그때그때 정해집니다.</p>
+
+      <p class="faq-q"><strong>Q. 기존 대기열은 언제 다 없어지나요?</strong></p>
+      <p>회차를 반복하면서 점차 소진됩니다. 다만 연락이 닿지 않는 신청은 처리가 지연될 수 있습니다.</p>
+
+      <hr>
+
+      <p><em>최종 수정: 2026-06-09</em></p>
+
     </div>
   </div>
 </main>
@@ -45,7 +443,6 @@
     <div class="pattern-inner"></div>
   </div>
 </div>
-<!-- partial -->
-  
+
 </body>
 </html>
