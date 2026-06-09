@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UMIN Commission Guide</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.15rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1rem; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.75; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.75; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.4rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0.05rem; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>Commission Guide</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="" selected>English</option>
+      <option value="./fr.html">Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>Join Server</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">Contents</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">Prerequisites</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">What I Can't Do</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">Pricing</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">Commission Queue System</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">Background</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">Terminology</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">New Queue Rules</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">Priority System</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">Legacy Queue Priority Benefit</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">Operating Cycle</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">Example</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">FAQ</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>This document explains the prerequisites for commissions, the scope of work I cannot do, pricing, and how the application and queue system operates.</p>
+        <p>Please read through this before submitting a commission request — it will make the process much smoother.</p>
+        <p>Please note that while this document is available in multiple languages, <strong>all communication during commission work is conducted in English only</strong>.</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. Prerequisites</h2>
+      <ul>
+        <li>All commissioned mods are always <strong>distributed in the same way</strong> as other mods released on my Patreon.<br>
+          This means <strong>private commissions are not possible</strong>. All commissions are first released as an early-access release, then later made publicly available — the same as any other mod.</li>
+        <li><strong>NSFW mods are not available.</strong><br>
+          Exposure up to the level seen in Dead or Alive or The First Descendant is the maximum allowed.<br>
+          Depiction of male or female genitalia is <strong>absolutely not possible under any circumstances</strong>.<br>
+          (As a side note, explicit NSFW depictions are also a criminal offense in South Korea.)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. What I Can't Do</h2>
+      <h3 id="facial-expressions">I cannot create face mods with working facial expressions.</h3>
+      <blockquote>
+        <p>I am capable of face modding, but I do not yet have a stable workflow for delivering it reliably as a commission.</p>
+        <p>Face modding is always experimental for me, and I am not at a level where I feel comfortable charging for it.</p>
+      </blockquote>
+      <h3 id="new-design">I cannot create completely original designs.</h3>
+      <blockquote>
+        <p>I cannot work from concept art alone or pure custom designs. At minimum, an <strong>extracted model</strong> from another game is required.</p>
+        <p>That said, you do not need to provide the extracted model yourself. I typically locate and extract the model on my own, so all I ask is that you <strong>accurately confirm whether such a model exists</strong>.</p>
+      </blockquote>
+      <h3 id="hair-mod">The Hair Mods I can create are very limited.</h3>
+      <blockquote>
+        <p>If the source uses a <strong>Haircard-based mesh</strong> from a relatively recent game — like Stellar Blade or Mortal Kombat 1 — I can produce great results.</p>
+        <p>However, older Hair Card styles — like those in Tekken 7 or DOA5/6 — require a completely new hair mesh to be designed from scratch. This takes far too long, and I am not confident I can deliver a result worth charging for.</p>
+        <p>Please keep this in mind when discussing your commission with me.</p>
+      </blockquote>
+      <h3 id="stage-mod">I cannot currently create stage mods.</h3>
+      <blockquote>
+        <p>Stage modding still has a lot of things I am experimenting with and learning.</p>
+        <p>Instead, I plan to <strong>open stage commissions separately</strong> in the future — until then, I am not accepting stage commission requests.</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. Pricing</h2>
+      <ul>
+        <li>Generally, <strong>30–40 USD for outfit/character mods</strong>, though the price may vary depending on the method and time required.</li>
+        <li>The exact price is determined in advance, taking into account the estimated time and method of production.</li>
+        <li>Payment is always made once I determine that <strong>more than half of the work is complete</strong>.</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. Commission Queue System</h2>
+      <p>The existing commission queue became excessively long, causing difficulties in processing.<br>
+      To address this, I am switching to a <strong>short, rotating new queue</strong> system.</p>
+      <blockquote>
+        <p><strong>Core principle:</strong> The priority of the legacy queue is <strong>above all else</strong>.</p>
+        <p>Those registered in the legacy queue will <strong>always rank ahead of new applicants</strong>, regardless of application order.</p>
+      </blockquote>
+      <p>The two key points are:</p>
+      <ul>
+        <li>The queue accepts only a <strong>small number</strong> of slots at a time, allowing for faster turnover.</li>
+        <li>The <strong>priority of previous applicants is fully preserved</strong>.</li>
+      </ul>
+      <h3 id="41-background">4.1 Background</h3>
+      <ul>
+        <li>The queue grew so long that many requests have been sitting for 6 months to over a year.</li>
+        <li>Older requests are more likely to be <strong>unreachable</strong>, which frequently stalled the process even when I tried to proceed in order.</li>
+        <li>New applications are currently closed, and going forward I will operate under the new system described below.</li>
+      </ul>
+      <h3 id="42-terminology">4.2 Terminology</h3>
+      <table>
+        <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Legacy Queue</strong></td><td>The list of old, unprocessed requests submitted under the previous system. It is kept and not deleted.</td></tr>
+          <tr><td><strong>New Queue</strong></td><td>The short, active queue where actual work is processed. Only a small number of slots are accepted per round, and the number is determined each round.</td></tr>
+          <tr><td><strong>Priority Benefit</strong></td><td>A one-time benefit that allows legacy queue registrants to rank ahead of new applicants in the new queue. It is consumed once used.</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 New Queue Rules</h3>
+      <ul>
+        <li>The new queue operates with only a <strong>small number of slots</strong>.</li>
+        <li>It opens and closes on short cycles, keeping turnover fast.</li>
+        <li>Once all active commissions are complete, the next round opens. (→ <a href="#46-operating-cycle">4.6 Operating Cycle</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>Note — The number of accepted slots is not fixed.</strong></p>
+        <p>The number "5" used throughout this document is purely an <strong>example</strong>.</p>
+        <p>The number of slots accepted per round may be <strong>as few as 2 or 3</strong>, decided fresh each round.</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 Priority System</h3>
+      <p>After opening the new queue and collecting applications, priority is calculated as follows.</p>
+      <p><strong>Step 1 — Assign base ranking by application order</strong><br>
+      All applications receive a base rank based on <strong>the order in which they were submitted</strong>.</p>
+      <p><strong>Step 2 — Apply legacy queue priority (absolute precedence)</strong><br>
+      Any applicant who was <strong>registered in the legacy queue</strong> is moved <strong>above all new applicants</strong>, regardless of when they applied.</p>
+      <ul>
+        <li>Legacy queue holders always <strong>rank ahead of new applicants</strong>.</li>
+        <li>Among legacy queue holders, rank is determined by their <strong>original legacy queue position</strong>.</li>
+        <li>Among new applicants, rank is determined by <strong>application order</strong>.</li>
+      </ul>
+      <p>The final order is always: <strong>[Legacy queue holders (by original rank)] → [New applicants (by application order)]</strong>.</p>
+      <p><strong>Step 3 — Accept only the number of slots set for that round</strong><br>
+      From the sorted list, <strong>only the number of slots set for that round</strong> are accepted; the rest are rejected for this round.<br>
+      (The number of slots is not fixed and varies each round — see the note in <a href="#43-new-queue-rules">4.3 New Queue Rules</a>.)<br>
+      Rejection is only for the current round; you may reapply in the next round.</p>
+      <h3 id="45-priority-benefit">4.5 Legacy Queue Priority Benefit</h3>
+      <ul>
+        <li>Those in the legacy queue are <strong>guaranteed a higher rank</strong> when applying to the new queue.</li>
+        <li>However, the moment you are <strong>officially accepted into the new queue</strong> through this benefit:
+          <ul>
+            <li>You are <strong>removed from the legacy queue</strong>.</li>
+            <li>The <strong>priority benefit is also consumed</strong>. (One-time use)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>In other words, the priority is guaranteed "as long as you remain in the legacy queue." Once you move to the new queue, you are treated the same as any other applicant.</p>
+      <h3 id="46-operating-cycle">4.6 Operating Cycle</h3>
+      <ol>
+        <li>The new queue opens.</li>
+        <li>Applications are collected, and the accepted slots for that round are determined according to <a href="#44-priority-system">4.4 Priority System</a>.</li>
+        <li>Accepted commissions are worked on.</li>
+        <li>Once <strong>all active work is complete</strong>, return to step 1 and open the new queue again.</li>
+      </ol>
+      <p>Repeating this cycle gradually clears the legacy queue as well.</p>
+      <h3 id="47-example">4.7 Example</h3>
+      <blockquote>
+        <p>The example below assumes the round's accepted slot count is <strong>5</strong>.</p>
+        <p>As explained earlier, this number is not fixed and may vary — 2, 3, etc. — each round.</p>
+      </blockquote>
+      <p>Assume the new queue opens and <strong>10 people (A–J)</strong> apply in order.<br>
+      Among them, <strong>C, F, and H</strong> were in the legacy queue, with legacy ranks of <strong>C (1st) · F (2nd) · H (5th)</strong>.</p>
+      <p><strong>Priority Calculation Result:</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">Final Rank</th><th style="text-align:center">Applicant</th><th>Reason</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>Legacy queue — 1st</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>Legacy queue — 2nd</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>Legacy queue — 5th</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>New applicant (applied first)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>New applicant</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>New applicant — <strong>rejected this round</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Result (assuming 5 accepted slots):</strong></p>
+      <ul>
+        <li>Top 5 — <strong>C, F, H, A, B</strong> — are accepted.</li>
+        <li>C, F, and H have been accepted into the new queue → <strong>removed from the legacy queue + priority benefit consumed</strong>.</li>
+        <li>D, E, G, I, J are rejected this round (may reapply next round).</li>
+        <li>Once all these commissions are complete → the next round queue opens.</li>
+      </ul>
+      <blockquote>
+        <p>If the accepted slot count for this round were <strong>3</strong>, only the top 3 — <strong>C, F, H</strong> — would be accepted, and everyone from A onward would be rejected.</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 FAQ</h3>
+      <p class="faq-q"><strong>Q. I'm in the legacy queue — do I need to apply to the new queue separately?</strong></p>
+      <p>Yes. Being in the legacy queue does not automatically advance you. You must apply when the new queue opens, at which point your priority benefit will be applied.</p>
+      <p class="faq-q"><strong>Q. If I am rejected this round, does my legacy queue priority disappear?</strong></p>
+      <p>No. The benefit is only consumed <strong>when you are officially accepted into the new queue</strong>. If rejected, you remain in the legacy queue and may use the benefit again next round.</p>
+      <p class="faq-q"><strong>Q. How many slots are accepted per round?</strong></p>
+      <p>It is not fixed. It varies round by round — typically somewhere between 2 and 5.</p>
+      <p class="faq-q"><strong>Q. When will the legacy queue be fully cleared?</strong></p>
+      <p>It will gradually be cleared over successive rounds. However, requests where the applicant cannot be reached may be delayed.</p>
+      <hr>
+      <p><em>Last updated: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

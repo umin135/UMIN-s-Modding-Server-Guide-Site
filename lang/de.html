@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>UMIN Auftragsguide</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.15rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1rem; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.75; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.75; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.4rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0.05rem; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>Auftragsguide</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="./fr.html">Français</option>
+      <option value="" selected>Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>Server beitreten</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">Inhalt</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">Voraussetzungen</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">Was ich nicht tun kann</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">Preise</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">Auftragswarteschlange</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">Hintergrund</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">Begriffe</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">Neue Warteschlangenregeln</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">Prioritätssystem</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">Prioritätsvorteil der alten Warteschlange</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">Betriebszyklus</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">Beispiel</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">FAQ</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>Dieses Dokument erklärt die Voraussetzungen für Aufträge, was ich nicht tun kann, die Preise und wie das Bewerbungs- und Warteschlangensystem funktioniert.</p>
+        <p>Bitte lesen Sie dies, bevor Sie eine Auftragsanfrage einreichen — es wird den Prozess erheblich vereinfachen.</p>
+        <p>Bitte beachten Sie, dass dieses Dokument zwar in mehreren Sprachen verfügbar ist, <strong>die gesamte Kommunikation während der Auftragsarbeit jedoch ausschließlich auf Englisch erfolgt</strong>.</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. Voraussetzungen</h2>
+      <ul>
+        <li>Alle beauftragten Mods werden immer auf die <strong>gleiche Weise verteilt</strong> wie andere Mods auf meinem Patreon.<br>
+          Das bedeutet, dass <strong>private Aufträge nicht möglich sind</strong>. Alle Aufträge werden zunächst als Early-Access-Version veröffentlicht und später öffentlich zugänglich gemacht — wie jeder andere Mod.</li>
+        <li><strong>NSFW-Mods sind nicht verfügbar.</strong><br>
+          Die Freizügigkeit bis zum Niveau von Dead or Alive oder The First Descendant ist das Maximum.<br>
+          Die Darstellung männlicher oder weiblicher Genitalien ist <strong>unter keinen Umständen möglich</strong>.<br>
+          (Nebenbei bemerkt: Explizite NSFW-Darstellungen sind in Südkorea auch eine Straftat.)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. Was ich nicht tun kann</h2>
+      <h3 id="facial-expressions">Ich kann keine Gesichtsmods mit funktionierenden Gesichtsausdrücken erstellen.</h3>
+      <blockquote>
+        <p>Ich bin in der Lage, Gesichts-Modding zu betreiben, aber ich habe noch keinen stabilen Workflow, um es zuverlässig als Auftrag zu liefern.</p>
+        <p>Gesichts-Modding ist für mich immer experimentell, und ich bin nicht auf einem Niveau, auf dem ich mich wohl fühle, dafür zu berechnen.</p>
+      </blockquote>
+      <h3 id="new-design">Ich kann keine völlig originellen Designs erstellen.</h3>
+      <blockquote>
+        <p>Ich kann nicht nur von Konzeptkunst oder reinen benutzerdefinierten Designs arbeiten. Mindestens ein <strong>extrahiertes Modell</strong> aus einem anderen Spiel ist erforderlich.</p>
+        <p>Das heißt, Sie müssen das extrahierte Modell nicht selbst bereitstellen. Ich lokalisiere und extrahiere das Modell in der Regel selbst, daher bitte ich Sie nur, <strong>genau zu bestätigen, ob ein solches Modell existiert</strong>.</p>
+      </blockquote>
+      <h3 id="hair-mod">Die Haar-Mods, die ich erstellen kann, sind sehr begrenzt.</h3>
+      <blockquote>
+        <p>Wenn die Quelle ein <strong>Haircard-basiertes Mesh</strong> aus einem relativ neueren Spiel verwendet — wie Stellar Blade oder Mortal Kombat 1 — kann ich großartige Ergebnisse erzielen.</p>
+        <p>Ältere Hair-Card-Stile — wie die in Tekken 7 oder DOA5/6 — erfordern jedoch die Gestaltung eines völlig neuen Haar-Meshes von Grund auf. Das dauert viel zu lange, und ich bin nicht zuversichtlich, dass ich ein Ergebnis liefern kann, das es wert ist zu berechnen.</p>
+        <p>Bitte behalten Sie dies im Hinterkopf, wenn Sie Ihren Auftrag mit mir besprechen.</p>
+      </blockquote>
+      <h3 id="stage-mod">Ich kann derzeit keine Stage-Mods erstellen.</h3>
+      <blockquote>
+        <p>Stage-Modding ist noch ein Bereich, in dem ich viel experimentiere und lerne.</p>
+        <p>Stattdessen plane ich, <strong>Stage-Aufträge separat zu eröffnen</strong> — bis dahin nehme ich keine Stage-Auftragsanfragen an.</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. Preise</h2>
+      <ul>
+        <li>Im Allgemeinen <strong>30–40 USD für Kostüm-/Charakter-Mods</strong>, obwohl der Preis je nach Methode und erforderlicher Zeit variieren kann.</li>
+        <li>Der genaue Preis wird im Voraus festgelegt, unter Berücksichtigung der geschätzten Zeit und Produktionsmethode.</li>
+        <li>Die Zahlung erfolgt immer, sobald ich festgestellt habe, dass <strong>mehr als die Hälfte der Arbeit abgeschlossen ist</strong>.</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. Auftragswarteschlange</h2>
+      <p>Die bestehende Auftragswarteschlange wurde übermäßig lang, was zu Schwierigkeiten bei der Bearbeitung führte.<br>
+      Um dies zu beheben, wechsle ich zu einem System mit einer <strong>kurzen, rotierenden neuen Warteschlange</strong>.</p>
+      <blockquote>
+        <p><strong>Grundprinzip:</strong> Die Priorität der alten Warteschlange hat <strong>oberste Priorität</strong>.</p>
+        <p>Diejenigen, die in der alten Warteschlange registriert sind, werden <strong>immer vor neuen Bewerbern eingestuft</strong>, unabhängig von der Bewerbungsreihenfolge.</p>
+      </blockquote>
+      <p>Die zwei wichtigsten Punkte sind:</p>
+      <ul>
+        <li>Die Warteschlange nimmt nur eine <strong>kleine Anzahl</strong> von Plätzen gleichzeitig an, was eine schnellere Rotation ermöglicht.</li>
+        <li>Die <strong>Priorität früherer Bewerber bleibt vollständig erhalten</strong>.</li>
+      </ul>
+      <h3 id="41-background">4.1 Hintergrund</h3>
+      <ul>
+        <li>Die Warteschlange wurde so lang, dass viele Anfragen seit 6 Monaten bis über einem Jahr warten.</li>
+        <li>Ältere Anfragen sind schwerer <strong>erreichbar</strong>, was den Prozess oft blockiert hat, selbst wenn ich versuchte, der Reihe nach vorzugehen.</li>
+        <li>Neue Bewerbungen sind derzeit geschlossen, und künftig werde ich nach dem unten beschriebenen neuen System arbeiten.</li>
+      </ul>
+      <h3 id="42-terminology">4.2 Begriffe</h3>
+      <table>
+        <thead><tr><th>Begriff</th><th>Bedeutung</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Alte Warteschlange</strong></td><td>Die Liste alter, unbearbeiteter Anfragen aus dem alten System. Sie wird behalten und nicht gelöscht.</td></tr>
+          <tr><td><strong>Neue Warteschlange</strong></td><td>Die kurze, aktive Warteschlange, in der echte Arbeit bearbeitet wird. Pro Runde werden nur wenige Plätze angenommen, die Anzahl wird jede Runde festgelegt.</td></tr>
+          <tr><td><strong>Prioritätsvorteil</strong></td><td>Ein einmaliger Vorteil, der Registrierten der alten Warteschlange erlaubt, in der neuen Warteschlange vor neuen Bewerbern eingestuft zu werden. Er wird nach Verwendung verbraucht.</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 Neue Warteschlangenregeln</h3>
+      <ul>
+        <li>Die neue Warteschlange läuft nur mit einer <strong>kleinen Anzahl von Plätzen</strong>.</li>
+        <li>Sie öffnet und schließt in kurzen Zyklen und hält die Rotation schnell.</li>
+        <li>Sobald alle aktiven Aufträge abgeschlossen sind, öffnet die nächste Runde. (→ <a href="#46-operating-cycle">4.6 Betriebszyklus</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>Hinweis — Die Anzahl der akzeptierten Plätze ist nicht festgelegt.</strong></p>
+        <p>Die Zahl „5" in diesem Dokument ist rein ein <strong>Beispiel</strong>.</p>
+        <p>Die Anzahl der pro Runde akzeptierten Plätze kann <strong>nur 2 oder 3 betragen</strong>, jede Runde neu festgelegt.</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 Prioritätssystem</h3>
+      <p>Nach Öffnung der neuen Warteschlange und Sammlung der Bewerbungen wird die Priorität wie folgt berechnet.</p>
+      <p><strong>Schritt 1 — Grundranking nach Bewerbungsreihenfolge vergeben</strong><br>
+      Alle Bewerbungen erhalten einen Grundrang basierend auf <strong>der Reihenfolge ihrer Einreichung</strong>.</p>
+      <p><strong>Schritt 2 — Priorität der alten Warteschlange anwenden (absolute Vorrangstellung)</strong><br>
+      Jeder Bewerber, der <strong>in der alten Warteschlange registriert war</strong>, wird <strong>über alle neuen Bewerber</strong> verschoben, unabhängig vom Zeitpunkt der Bewerbung.</p>
+      <ul>
+        <li>Inhaber der alten Warteschlange sind immer <strong>vor neuen Bewerbern eingestuft</strong>.</li>
+        <li>Unter den Inhabern der alten Warteschlange bestimmt sich der Rang nach ihrer <strong>ursprünglichen Position in der alten Warteschlange</strong>.</li>
+        <li>Unter neuen Bewerbern bestimmt sich der Rang nach <strong>der Bewerbungsreihenfolge</strong>.</li>
+      </ul>
+      <p>Die endgültige Reihenfolge ist immer: <strong>[Inhaber der alten Warteschlange (nach ursprünglichem Rang)] → [Neue Bewerber (nach Bewerbungsreihenfolge)]</strong>.</p>
+      <p><strong>Schritt 3 — Nur die für diese Runde festgelegte Anzahl von Plätzen akzeptieren</strong><br>
+      Aus der sortierten Liste werden <strong>nur die für diese Runde festgelegten Plätze</strong> akzeptiert; der Rest wird für diese Runde abgelehnt.<br>
+      (Die Anzahl ist nicht festgelegt — siehe Hinweis in <a href="#43-new-queue-rules">4.3 Neue Warteschlangenregeln</a>.)<br>
+      Ablehnung gilt nur für die aktuelle Runde; Sie können sich in der nächsten Runde erneut bewerben.</p>
+      <h3 id="45-priority-benefit">4.5 Prioritätsvorteil der alten Warteschlange</h3>
+      <ul>
+        <li>Diejenigen in der alten Warteschlange erhalten einen <strong>garantiert höheren Rang</strong> bei der Bewerbung für die neue Warteschlange.</li>
+        <li>Sobald Sie jedoch <strong>offiziell in die neue Warteschlange aufgenommen werden</strong>:
+          <ul>
+            <li>Sie werden <strong>aus der alten Warteschlange entfernt</strong>.</li>
+            <li>Der <strong>Prioritätsvorteil wird ebenfalls verbraucht</strong>. (Einmalige Nutzung)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Mit anderen Worten: Die Priorität gilt „solange Sie in der alten Warteschlange bleiben." Sobald Sie in die neue Warteschlange wechseln, werden Sie wie jeder andere Bewerber behandelt.</p>
+      <h3 id="46-operating-cycle">4.6 Betriebszyklus</h3>
+      <ol>
+        <li>Die neue Warteschlange öffnet.</li>
+        <li>Bewerbungen werden gesammelt und die akzeptierten Plätze für diese Runde gemäß <a href="#44-priority-system">4.4 Prioritätssystem</a> bestimmt.</li>
+        <li>Akzeptierte Aufträge werden bearbeitet.</li>
+        <li>Sobald <strong>alle aktive Arbeit abgeschlossen ist</strong>, zurück zu Schritt 1 und neue Warteschlange öffnen.</li>
+      </ol>
+      <p>Durch Wiederholung dieses Zyklus wird auch die alte Warteschlange schrittweise abgebaut.</p>
+      <h3 id="47-example">4.7 Beispiel</h3>
+      <blockquote>
+        <p>Das folgende Beispiel geht davon aus, dass die akzeptierte Platzanzahl dieser Runde <strong>5</strong> beträgt.</p>
+        <p>Wie zuvor erklärt, ist diese Zahl nicht festgelegt und kann variieren — 2, 3 usw. — jede Runde.</p>
+      </blockquote>
+      <p>Angenommen, die neue Warteschlange öffnet und <strong>10 Personen (A–J)</strong> bewerben sich der Reihe nach.<br>
+      Darunter waren <strong>C, F und H</strong> in der alten Warteschlange mit den Rängen <strong>C (1.) · F (2.) · H (5.)</strong>.</p>
+      <p><strong>Ergebnis der Prioritätsberechnung:</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">Endrang</th><th style="text-align:center">Bewerber</th><th>Grund</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>Alte Warteschlange — 1.</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>Alte Warteschlange — 2.</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>Alte Warteschlange — 5.</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>Neuer Bewerber (zuerst beworben)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>Neuer Bewerber</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>Neuer Bewerber — <strong>diese Runde abgelehnt</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Ergebnis (angenommen 5 akzeptierte Plätze):</strong></p>
+      <ul>
+        <li>Top 5 — <strong>C, F, H, A, B</strong> — werden akzeptiert.</li>
+        <li>C, F und H wurden in die neue Warteschlange aufgenommen → <strong>aus der alten Warteschlange entfernt + Prioritätsvorteil verbraucht</strong>.</li>
+        <li>D, E, G, I, J werden diese Runde abgelehnt (können sich in der nächsten Runde erneut bewerben).</li>
+        <li>Sobald alle diese Aufträge abgeschlossen sind → öffnet die nächste Runde der Warteschlange.</li>
+      </ul>
+      <blockquote>
+        <p>Wenn die akzeptierte Platzanzahl dieser Runde <strong>3</strong> gewesen wäre, würden nur die Top 3 — <strong>C, F, H</strong> — akzeptiert, und alle ab A würden abgelehnt.</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 Häufig gestellte Fragen (FAQ)</h3>
+      <p class="faq-q"><strong>Q. Ich bin in der alten Warteschlange — muss ich mich separat für die neue Warteschlange bewerben?</strong></p>
+      <p>Ja. In der alten Warteschlange zu sein rückt Sie nicht automatisch vor. Sie müssen sich bewerben, wenn die neue Warteschlange öffnet, wobei Ihr Prioritätsvorteil angewendet wird.</p>
+      <p class="faq-q"><strong>Q. Wenn ich diese Runde abgelehnt werde, verschwindet meine Priorität der alten Warteschlange?</strong></p>
+      <p>Nein. Der Vorteil wird nur verbraucht, <strong>wenn Sie offiziell in die neue Warteschlange aufgenommen werden</strong>. Bei Ablehnung bleiben Sie in der alten Warteschlange und können den Vorteil in der nächsten Runde erneut nutzen.</p>
+      <p class="faq-q"><strong>Q. Wie viele Plätze werden pro Runde akzeptiert?</strong></p>
+      <p>Das ist nicht festgelegt. Es variiert von Runde zu Runde — typischerweise zwischen 2 und 5.</p>
+      <p class="faq-q"><strong>Q. Wann wird die alte Warteschlange vollständig abgebaut?</strong></p>
+      <p>Sie wird schrittweise über aufeinanderfolgende Runden abgebaut. Anfragen, bei denen der Bewerber nicht erreichbar ist, können sich jedoch verzögern.</p>
+      <hr>
+      <p><em>Zuletzt aktualisiert: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

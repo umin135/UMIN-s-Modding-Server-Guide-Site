@@ -126,6 +126,27 @@
       text-decoration: underline;
       text-underline-offset: 3px;
     }
+    .header-inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .lang-select {
+      font: inherit;
+      font-size: 0.82rem;
+      background-color: rgba(77, 73, 62, 0.15);
+      color: #4D493E;
+      border: 1px solid rgba(77, 73, 62, 0.5);
+      padding: 0.25rem 0.4rem;
+      cursor: pointer;
+      letter-spacing: 0.05rem;
+      margin-bottom: 0.55rem;
+    }
+    .lang-select:hover, .lang-select:focus {
+      background-color: rgba(77, 73, 62, 0.25);
+      outline: none;
+    }
   </style>
 </head>
 <body>
@@ -136,10 +157,26 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container header-inner">
     <h1>
       <span><b>커미션 가이드</b></span>
     </h1>
+    <select class="lang-select" onchange="location.href=this.value">
+      <option selected disabled>🌐 언어</option>
+      <option value="./lang/en.html">English</option>
+      <option value="./lang/fr.html">Français</option>
+      <option value="./lang/de.html">Deutsch</option>
+      <option value="./lang/es.html">Español</option>
+      <option value="./lang/it.html">Italiano</option>
+      <option value="./lang/pt.html">Português</option>
+      <option value="./lang/ru.html">Русский</option>
+      <option value="./lang/pl.html">Polski</option>
+      <option value="./lang/ar.html">العربية</option>
+      <option value="./lang/ja.html">日本語</option>
+      <option value="./lang/zh-hans.html">简体中文</option>
+      <option value="./lang/zh-hant.html">繁體中文</option>
+      <option value="./lang/th.html">ภาษาไทย</option>
+    </select>
   </div>
 </header>
 

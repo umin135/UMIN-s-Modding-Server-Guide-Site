@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>UMIN Commission Guide</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.15rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1rem; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.75; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.75; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.4rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0.05rem; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>Guia de Comissão</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="./fr.html">Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="" selected>Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>Entrar no Servidor</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">Índice</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">Pré-requisitos</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">O Que Não Posso Fazer</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">Preços</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">Sistema de Fila de Comissão</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">Contexto</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">Terminologia</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">Regras da Nova Fila</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">Sistema de Prioridade</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">Benefício de Prioridade da Fila Antiga</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">Ciclo de Operação</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">Exemplo</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">Perguntas Frequentes</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>Este documento explica os pré-requisitos para comissões, o escopo do trabalho que não posso fazer, os preços e como funciona o sistema de inscrição e fila.</p>
+        <p>Por favor, leia antes de enviar uma solicitação de comissão — isso tornará o processo muito mais tranquilo.</p>
+        <p>Observe que, embora este documento esteja disponível em vários idiomas, <strong>toda a comunicação durante o trabalho de comissão é realizada exclusivamente em inglês</strong>.</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. Pré-requisitos</h2>
+      <ul>
+        <li>Todos os mods comissionados são sempre <strong>distribuídos da mesma forma</strong> que outros mods lançados no meu Patreon.<br>
+          Isso significa que <strong>comissões privadas não são possíveis</strong>. Todas as comissões são primeiro lançadas como acesso antecipado e depois disponibilizadas ao público — igual a qualquer outro mod.</li>
+        <li><strong>Mods NSFW não estão disponíveis.</strong><br>
+          O nível máximo de exposição permitido é semelhante ao de Dead or Alive ou The First Descendant.<br>
+          A representação de genitália masculina ou feminina é <strong>absolutamente impossível sob qualquer circunstância</strong>.<br>
+          (Como nota adicional, representações NSFW explícitas também são crime na Coreia do Sul.)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. O Que Não Posso Fazer</h2>
+      <h3 id="facial-expressions">Não posso criar mods de rosto com expressões faciais funcionais.</h3>
+      <blockquote>
+        <p>Sou capaz de fazer mods de rosto, mas ainda não tenho um fluxo de trabalho estável para entregá-los de forma confiável como comissão.</p>
+        <p>A modificação de rostos ainda é experimental para mim e não me sinto confortável cobrando por isso.</p>
+      </blockquote>
+      <h3 id="new-design">Não posso criar designs completamente originais.</h3>
+      <blockquote>
+        <p>Não consigo trabalhar apenas com arte conceitual ou designs personalizados puros. No mínimo, é necessário um <strong>modelo extraído</strong> de outro jogo.</p>
+        <p>Dito isso, você não precisa fornecer o modelo extraído. Geralmente localizo e extraio o modelo por conta própria, então tudo que peço é que você <strong>confirme com precisão se tal modelo existe</strong>.</p>
+      </blockquote>
+      <h3 id="hair-mod">Os Mods de Cabelo que posso criar são muito limitados.</h3>
+      <blockquote>
+        <p>Se a fonte usa uma <strong>malha baseada em Haircard</strong> de um jogo relativamente recente — como Stellar Blade ou Mortal Kombat 1 — posso produzir ótimos resultados.</p>
+        <p>No entanto, estilos de Hair Card mais antigos — como os de Tekken 7 ou DOA5/6 — exigem que uma malha de cabelo completamente nova seja projetada do zero. Isso leva muito tempo e não estou confiante de que posso entregar um resultado que valha o pagamento.</p>
+        <p>Tenha isso em mente ao discutir sua comissão comigo.</p>
+      </blockquote>
+      <h3 id="stage-mod">Atualmente não posso criar mods de palco.</h3>
+      <blockquote>
+        <p>A modificação de palcos ainda tem muitas coisas que estou experimentando e aprendendo.</p>
+        <p>Em vez disso, planejo <strong>abrir comissões de palco separadamente</strong> no futuro — até lá, não estou aceitando solicitações de comissão de palco.</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. Preços</h2>
+      <ul>
+        <li>Geralmente, <strong>30–40 USD para mods de roupa/personagem</strong>, embora o preço possa variar dependendo do método e do tempo necessário.</li>
+        <li>O preço exato é determinado antecipadamente, levando em conta o tempo estimado e o método de produção.</li>
+        <li>O pagamento é sempre feito quando determino que <strong>mais da metade do trabalho está concluída</strong>.</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. Sistema de Fila de Comissão</h2>
+      <p>A fila de comissão existente ficou excessivamente longa, causando dificuldades no processamento.<br>
+      Para resolver isso, estou mudando para um sistema de <strong>nova fila curta e rotativa</strong>.</p>
+      <blockquote>
+        <p><strong>Princípio fundamental:</strong> A prioridade da fila antiga está <strong>acima de tudo</strong>.</p>
+        <p>Os registrados na fila antiga <strong>sempre terão prioridade sobre os novos candidatos</strong>, independentemente da ordem de inscrição.</p>
+      </blockquote>
+      <p>Os dois pontos principais são:</p>
+      <ul>
+        <li>A fila aceita apenas um <strong>pequeno número</strong> de vagas por vez, permitindo uma rotatividade mais rápida.</li>
+        <li>A <strong>prioridade dos candidatos anteriores é totalmente preservada</strong>.</li>
+      </ul>
+      <h3 id="41-background">4.1 Contexto</h3>
+      <ul>
+        <li>A fila ficou tão longa que muitas solicitações estão pendentes há 6 meses a mais de um ano.</li>
+        <li>Solicitações mais antigas têm maior probabilidade de <strong>não serem alcançadas</strong>, o que frequentemente paralisava o processo mesmo quando eu tentava prosseguir em ordem.</li>
+        <li>Novas inscrições estão atualmente fechadas e, daqui para frente, operarei sob o novo sistema descrito abaixo.</li>
+      </ul>
+      <h3 id="42-terminology">4.2 Terminologia</h3>
+      <table>
+        <thead><tr><th>Termo</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Fila Antiga</strong></td><td>A lista de solicitações antigas e não processadas enviadas sob o sistema anterior. É mantida e não excluída.</td></tr>
+          <tr><td><strong>Nova Fila</strong></td><td>A fila ativa e curta onde o trabalho real é processado. Apenas um pequeno número de vagas é aceito por rodada, e o número é determinado a cada rodada.</td></tr>
+          <tr><td><strong>Benefício de Prioridade</strong></td><td>Um benefício de uso único que permite aos registrados na fila antiga ter prioridade sobre os novos candidatos na nova fila. É consumido após o uso.</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 Regras da Nova Fila</h3>
+      <ul>
+        <li>A nova fila opera com apenas um <strong>pequeno número de vagas</strong>.</li>
+        <li>Ela abre e fecha em ciclos curtos, mantendo a rotatividade rápida.</li>
+        <li>Assim que todas as comissões ativas forem concluídas, a próxima rodada é aberta. (→ <a href="#46-operating-cycle">4.6 Ciclo de Operação</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>Nota — O número de vagas aceitas não é fixo.</strong></p>
+        <p>O número "5" usado neste documento é puramente um <strong>exemplo</strong>.</p>
+        <p>O número de vagas aceitas por rodada pode ser <strong>tão pequeno quanto 2 ou 3</strong>, decidido a cada rodada.</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 Sistema de Prioridade</h3>
+      <p>Após abrir a nova fila e coletar as inscrições, a prioridade é calculada da seguinte forma.</p>
+      <p><strong>Etapa 1 — Atribuir classificação base por ordem de inscrição</strong><br>
+      Todas as inscrições recebem uma classificação base com base na <strong>ordem em que foram enviadas</strong>.</p>
+      <p><strong>Etapa 2 — Aplicar prioridade da fila antiga (precedência absoluta)</strong><br>
+      Qualquer candidato que estava <strong>registrado na fila antiga</strong> é movido <strong>acima de todos os novos candidatos</strong>, independentemente de quando se inscreveu.</p>
+      <ul>
+        <li>Os detentores da fila antiga sempre <strong>têm prioridade sobre os novos candidatos</strong>.</li>
+        <li>Entre os detentores da fila antiga, a classificação é determinada pela <strong>posição original na fila antiga</strong>.</li>
+        <li>Entre os novos candidatos, a classificação é determinada pela <strong>ordem de inscrição</strong>.</li>
+      </ul>
+      <p>A ordem final é sempre: <strong>[Detentores da fila antiga (por classificação original)] → [Novos candidatos (por ordem de inscrição)]</strong>.</p>
+      <p><strong>Etapa 3 — Aceitar apenas o número de vagas definido para aquela rodada</strong><br>
+      Da lista classificada, <strong>apenas o número de vagas definido para aquela rodada</strong> é aceito; os demais são rejeitados para esta rodada.<br>
+      (O número de vagas não é fixo e varia a cada rodada — veja a nota em <a href="#43-new-queue-rules">4.3 Regras da Nova Fila</a>.)<br>
+      A rejeição é apenas para a rodada atual; você pode se inscrever novamente na próxima rodada.</p>
+      <h3 id="45-priority-benefit">4.5 Benefício de Prioridade da Fila Antiga</h3>
+      <ul>
+        <li>Os que estão na fila antiga têm <strong>garantia de uma classificação mais alta</strong> ao se inscreverem na nova fila.</li>
+        <li>No entanto, no momento em que você for <strong>oficialmente aceito na nova fila</strong> por meio deste benefício:
+          <ul>
+            <li>Você é <strong>removido da fila antiga</strong>.</li>
+            <li>O <strong>benefício de prioridade também é consumido</strong>. (Uso único)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Em outras palavras, a prioridade é garantida "enquanto você permanecer na fila antiga." Depois de passar para a nova fila, você é tratado como qualquer outro candidato.</p>
+      <h3 id="46-operating-cycle">4.6 Ciclo de Operação</h3>
+      <ol>
+        <li>A nova fila é aberta.</li>
+        <li>As inscrições são coletadas e as vagas aceitas para aquela rodada são determinadas de acordo com <a href="#44-priority-system">4.4 Sistema de Prioridade</a>.</li>
+        <li>As comissões aceitas são trabalhadas.</li>
+        <li>Assim que <strong>todo o trabalho ativo estiver concluído</strong>, retorne à etapa 1 e abra a nova fila novamente.</li>
+      </ol>
+      <p>Repetir esse ciclo gradualmente limpa a fila antiga também.</p>
+      <h3 id="47-example">4.7 Exemplo</h3>
+      <blockquote>
+        <p>O exemplo abaixo assume que o número de vagas aceitas na rodada é <strong>5</strong>.</p>
+        <p>Como explicado anteriormente, esse número não é fixo e pode variar — 2, 3, etc. — a cada rodada.</p>
+      </blockquote>
+      <p>Suponha que a nova fila seja aberta e <strong>10 pessoas (A–J)</strong> se inscrevam em ordem.<br>
+      Entre elas, <strong>C, F e H</strong> estavam na fila antiga, com classificações de <strong>C (1º) · F (2º) · H (5º)</strong>.</p>
+      <p><strong>Resultado do Cálculo de Prioridade:</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">Classificação Final</th><th style="text-align:center">Candidato</th><th>Motivo</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>Fila antiga — 1º</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>Fila antiga — 2º</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>Fila antiga — 5º</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>Novo candidato (inscreveu-se primeiro)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>Novo candidato</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>Novo candidato — <strong>rejeitado nesta rodada</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Resultado (assumindo 5 vagas aceitas):</strong></p>
+      <ul>
+        <li>Os 5 primeiros — <strong>C, F, H, A, B</strong> — são aceitos.</li>
+        <li>C, F e H foram aceitos na nova fila → <strong>removidos da fila antiga + benefício de prioridade consumido</strong>.</li>
+        <li>D, E, G, I, J são rejeitados nesta rodada (podem se inscrever novamente na próxima rodada).</li>
+        <li>Assim que todas essas comissões forem concluídas → a fila da próxima rodada é aberta.</li>
+      </ul>
+      <blockquote>
+        <p>Se o número de vagas aceitas nesta rodada fosse <strong>3</strong>, apenas os 3 primeiros — <strong>C, F, H</strong> — seriam aceitos, e todos a partir de A seriam rejeitados.</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 Perguntas Frequentes</h3>
+      <p class="faq-q"><strong>P. Estou na fila antiga — preciso me inscrever na nova fila separadamente?</strong></p>
+      <p>Sim. Estar na fila antiga não avança automaticamente. Você deve se inscrever quando a nova fila abrir, momento em que seu benefício de prioridade será aplicado.</p>
+      <p class="faq-q"><strong>P. Se for rejeitado nesta rodada, minha prioridade da fila antiga desaparece?</strong></p>
+      <p>Não. O benefício só é consumido <strong>quando você é oficialmente aceito na nova fila</strong>. Se rejeitado, você permanece na fila antiga e pode usar o benefício novamente na próxima rodada.</p>
+      <p class="faq-q"><strong>P. Quantas vagas são aceitas por rodada?</strong></p>
+      <p>Não é fixo. Varia de rodada para rodada — normalmente entre 2 e 5.</p>
+      <p class="faq-q"><strong>P. Quando a fila antiga será completamente encerrada?</strong></p>
+      <p>Será gradualmente encerrada ao longo de rodadas sucessivas. No entanto, solicitações onde o candidato não pode ser alcançado podem ser atrasadas.</p>
+      <hr>
+      <p><em>Last updated: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

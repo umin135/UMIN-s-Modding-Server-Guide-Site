@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>UMIN Commission Guide</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.15rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1rem; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.75; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.75; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.4rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0.05rem; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>Przewodnik po zamówieniach</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="./fr.html">Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="" selected>Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>Dołącz do serwera</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">Spis treści</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">Wymagania wstępne</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">Czego nie mogę zrobić</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">Cennik</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">System kolejki zamówień</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">Tło</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">Terminologia</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">Zasady nowej kolejki</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">System priorytetów</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">Przywilej priorytetu starej kolejki</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">Cykl operacyjny</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">Przykład</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">Często zadawane pytania</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>Dokument ten wyjaśnia wymagania wstępne dotyczące zamówień, zakres pracy, której nie mogę wykonać, cennik oraz sposób działania systemu zgłoszeń i kolejki.</p>
+        <p>Proszę przeczytać przed złożeniem zamówienia — znacznie ułatwi to cały proces.</p>
+        <p>Należy pamiętać, że choć ten dokument jest dostępny w wielu językach, <strong>cała komunikacja w trakcie realizacji zamówienia odbywa się wyłącznie w języku angielskim</strong>.</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. Wymagania wstępne</h2>
+      <ul>
+        <li>Wszystkie zamówione mody są zawsze <strong>dystrybuowane w ten sam sposób</strong> co inne mody wydane na moim Patreonie.<br>
+          Oznacza to, że <strong>prywatne zamówienia są niemożliwe</strong>. Wszystkie zamówienia są najpierw wydawane jako wczesny dostęp, a następnie udostępniane publicznie — tak samo jak każdy inny mod.</li>
+        <li><strong>Mody NSFW są niedostępne.</strong><br>
+          Maksymalny dozwolony poziom nagości jest podobny do tego w Dead or Alive lub The First Descendant.<br>
+          Przedstawianie męskich lub żeńskich narządów płciowych jest <strong>absolutnie niemożliwe pod żadnym pozorem</strong>.<br>
+          (Nawiasem mówiąc, jawne treści NSFW są również przestępstwem w Korei Południowej.)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. Czego nie mogę zrobić</h2>
+      <h3 id="facial-expressions">Nie mogę tworzyć modów twarzy z działającą mimiką.</h3>
+      <blockquote>
+        <p>Jestem w stanie tworzyć mody twarzy, ale nie mam jeszcze stabilnego przepływu pracy, który pozwoliłby mi rzetelnie dostarczać je jako zamówienia.</p>
+        <p>Modowanie twarzy jest dla mnie nadal eksperymentalne i nie czuję się komfortowo pobierając za to opłaty.</p>
+      </blockquote>
+      <h3 id="new-design">Nie mogę tworzyć całkowicie oryginalnych projektów.</h3>
+      <blockquote>
+        <p>Nie mogę pracować wyłącznie na bazie concept artów ani czystych projektów niestandardowych. Potrzebny jest co najmniej <strong>wyekstrahowany model</strong> z innej gry.</p>
+        <p>Nie musisz jednak samodzielnie dostarczać wyekstrahowanego modelu. Zazwyczaj sam go szukam i wyodrębniam, więc wszystko, o co proszę, to <strong>dokładne potwierdzenie, czy taki model istnieje</strong>.</p>
+      </blockquote>
+      <h3 id="hair-mod">Mody włosów, które mogę tworzyć, są bardzo ograniczone.</h3>
+      <blockquote>
+        <p>Jeśli źródło wykorzystuje <strong>siatkę opartą na Haircard</strong> z stosunkowo nowej gry — takiej jak Stellar Blade lub Mortal Kombat 1 — mogę osiągnąć świetne wyniki.</p>
+        <p>Jednak starsze style Hair Card — jak te w Tekken 7 lub DOA5/6 — wymagają zaprojektowania zupełnie nowej siatki włosów od podstaw. Zajmuje to zbyt dużo czasu i nie jestem pewny, czy mogę dostarczyć wynik warty zapłaty.</p>
+        <p>Proszę mieć to na uwadze podczas omawiania zamówienia ze mną.</p>
+      </blockquote>
+      <h3 id="stage-mod">Obecnie nie mogę tworzyć modów aren/stadiów.</h3>
+      <blockquote>
+        <p>Modowanie aren wciąż ma wiele rzeczy, które eksperymentuję i których się uczę.</p>
+        <p>Zamiast tego planuję <strong>otworzyć zamówienia na areny osobno</strong> w przyszłości — do tego czasu nie przyjmuję takich zamówień.</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. Cennik</h2>
+      <ul>
+        <li>Zazwyczaj <strong>30–40 USD za mody strojów/postaci</strong>, choć cena może się różnić w zależności od metody i wymaganego czasu.</li>
+        <li>Dokładna cena jest ustalana z góry, uwzględniając szacowany czas i metodę produkcji.</li>
+        <li>Płatność jest zawsze dokonywana, gdy ocenię, że <strong>ponad połowa pracy jest ukończona</strong>.</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. System kolejki zamówień</h2>
+      <p>Istniejąca kolejka zamówień stała się nadmiernie długa, co spowodowało trudności w przetwarzaniu.<br>
+      Aby temu zaradzić, przechodzę na system <strong>krótkiej, rotacyjnej nowej kolejki</strong>.</p>
+      <blockquote>
+        <p><strong>Zasada podstawowa:</strong> Priorytet starej kolejki jest <strong>ponad wszystkim</strong>.</p>
+        <p>Zarejestrowani w starej kolejce <strong>zawsze będą mieli pierwszeństwo przed nowymi zgłaszającymi</strong>, niezależnie od kolejności zgłoszeń.</p>
+      </blockquote>
+      <p>Dwa kluczowe punkty to:</p>
+      <ul>
+        <li>Kolejka przyjmuje tylko <strong>niewielką liczbę</strong> slotów na raz, co pozwala na szybszą rotację.</li>
+        <li><strong>Priorytet poprzednich zgłaszających jest w pełni zachowany</strong>.</li>
+      </ul>
+      <h3 id="41-background">4.1 Tło</h3>
+      <ul>
+        <li>Kolejka stała się tak długa, że wiele zgłoszeń czeka od 6 miesięcy do ponad roku.</li>
+        <li>Starsze zgłoszenia częściej okazują się <strong>nieosiągalne</strong>, co często wstrzymywało proces nawet gdy próbowałem działać w kolejności.</li>
+        <li>Nowe zgłoszenia są obecnie zamknięte i od teraz będę działał zgodnie z nowym systemem opisanym poniżej.</li>
+      </ul>
+      <h3 id="42-terminology">4.2 Terminologia</h3>
+      <table>
+        <thead><tr><th>Termin</th><th>Znaczenie</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Stara kolejka</strong></td><td>Lista starych, nieprzetworzoných zgłoszeń złożonych w ramach poprzedniego systemu. Jest zachowywana i nie jest usuwana.</td></tr>
+          <tr><td><strong>Nowa kolejka</strong></td><td>Krótka, aktywna kolejka, w której odbywa się faktyczna praca. W jednej rundzie przyjmowana jest tylko niewielka liczba slotów, a ich liczba jest ustalana w każdej rundzie.</td></tr>
+          <tr><td><strong>Przywilej priorytetu</strong></td><td>Jednorazowy przywilej pozwalający zarejestrowanym w starej kolejce zająć wyższe miejsce niż nowi zgłaszający w nowej kolejce. Jest zużywany po użyciu.</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 Zasady nowej kolejki</h3>
+      <ul>
+        <li>Nowa kolejka działa tylko z <strong>niewielką liczbą slotów</strong>.</li>
+        <li>Otwiera się i zamyka w krótkich cyklach, zapewniając szybką rotację.</li>
+        <li>Gdy wszystkie aktywne zamówienia zostaną ukończone, otwiera się następna runda. (→ <a href="#46-operating-cycle">4.6 Cykl operacyjny</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>Uwaga — Liczba przyjętych slotów nie jest stała.</strong></p>
+        <p>Liczba "5" używana w tym dokumencie jest wyłącznie <strong>przykładem</strong>.</p>
+        <p>Liczba slotów przyjmowanych na rundę może wynosić <strong>zaledwie 2 lub 3</strong>, ustalana na nowo w każdej rundzie.</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 System priorytetów</h3>
+      <p>Po otwarciu nowej kolejki i zebraniu zgłoszeń priorytet jest obliczany w następujący sposób.</p>
+      <p><strong>Krok 1 — Przypisanie bazowego rankingu według kolejności zgłoszeń</strong><br>
+      Wszystkie zgłoszenia otrzymują bazowy ranking na podstawie <strong>kolejności ich złożenia</strong>.</p>
+      <p><strong>Krok 2 — Zastosowanie priorytetu starej kolejki (absolutne pierwszeństwo)</strong><br>
+      Każdy zgłaszający, który był <strong>zarejestrowany w starej kolejce</strong>, jest przenoszony <strong>powyżej wszystkich nowych zgłaszających</strong>, niezależnie od czasu zgłoszenia.</p>
+      <ul>
+        <li>Posiadacze starej kolejki zawsze <strong>mają pierwszeństwo przed nowymi zgłaszającymi</strong>.</li>
+        <li>Wśród posiadaczy starej kolejki ranking jest ustalany na podstawie ich <strong>pierwotnej pozycji w starej kolejce</strong>.</li>
+        <li>Wśród nowych zgłaszających ranking jest ustalany na podstawie <strong>kolejności zgłoszeń</strong>.</li>
+      </ul>
+      <p>Ostateczna kolejność jest zawsze: <strong>[Posiadacze starej kolejki (według pierwotnego rankingu)] → [Nowi zgłaszający (według kolejności zgłoszeń)]</strong>.</p>
+      <p><strong>Krok 3 — Przyjęcie tylko liczby slotów ustalonej dla danej rundy</strong><br>
+      Z posortowanej listy przyjmowana jest <strong>tylko liczba slotów ustalona dla danej rundy</strong>; pozostałe są odrzucane w tej rundzie.<br>
+      (Liczba slotów nie jest stała i zmienia się w każdej rundzie — patrz uwaga w <a href="#43-new-queue-rules">4.3 Zasady nowej kolejki</a>.)<br>
+      Odrzucenie dotyczy tylko bieżącej rundy; możesz ponownie złożyć zgłoszenie w następnej rundzie.</p>
+      <h3 id="45-priority-benefit">4.5 Przywilej priorytetu starej kolejki</h3>
+      <ul>
+        <li>Osoby w starej kolejce mają <strong>gwarantowany wyższy ranking</strong> przy składaniu zgłoszenia do nowej kolejki.</li>
+        <li>Jednak w momencie, gdy zostaniesz <strong>oficjalnie przyjęty do nowej kolejki</strong> poprzez ten przywilej:
+          <ul>
+            <li>Zostajesz <strong>usunięty ze starej kolejki</strong>.</li>
+            <li><strong>Przywilej priorytetu jest również zużywany</strong>. (Jednorazowe użycie)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Innymi słowy, priorytet jest gwarantowany "dopóki pozostajesz w starej kolejce." Po przejściu do nowej kolejki jesteś traktowany tak samo jak każdy inny zgłaszający.</p>
+      <h3 id="46-operating-cycle">4.6 Cykl operacyjny</h3>
+      <ol>
+        <li>Nowa kolejka zostaje otwarta.</li>
+        <li>Zbierane są zgłoszenia, a przyjęte sloty dla tej rundy są ustalane zgodnie z <a href="#44-priority-system">4.4 System priorytetów</a>.</li>
+        <li>Przyjęte zamówienia są realizowane.</li>
+        <li>Po <strong>ukończeniu całej aktywnej pracy</strong> wróć do kroku 1 i ponownie otwórz nową kolejkę.</li>
+      </ol>
+      <p>Powtarzanie tego cyklu stopniowo usuwa również starą kolejkę.</p>
+      <h3 id="47-example">4.7 Przykład</h3>
+      <blockquote>
+        <p>Poniższy przykład zakłada, że liczba przyjętych slotów w rundzie wynosi <strong>5</strong>.</p>
+        <p>Jak wyjaśniono wcześniej, liczba ta nie jest stała i może się różnić — 2, 3 itd. — w każdej rundzie.</p>
+      </blockquote>
+      <p>Załóżmy, że nowa kolejka zostaje otwarta i <strong>10 osób (A–J)</strong> składa zgłoszenia po kolei.<br>
+      Wśród nich <strong>C, F i H</strong> byli w starej kolejce, z pozycjami <strong>C (1.) · F (2.) · H (5.)</strong>.</p>
+      <p><strong>Wynik obliczenia priorytetu:</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">Ostateczny ranking</th><th style="text-align:center">Zgłaszający</th><th>Powód</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>Stara kolejka — 1. miejsce</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>Stara kolejka — 2. miejsce</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>Stara kolejka — 5. miejsce</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>Nowy zgłaszający (złożył zgłoszenie jako pierwszy)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>Nowy zgłaszający</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>Nowy zgłaszający — <strong>odrzucony w tej rundzie</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Wynik (zakładając 5 przyjętych slotów):</strong></p>
+      <ul>
+        <li>Pierwsze 5 — <strong>C, F, H, A, B</strong> — zostaje przyjętych.</li>
+        <li>C, F i H zostali przyjęci do nowej kolejki → <strong>usunięci ze starej kolejki + przywilej priorytetu zużyty</strong>.</li>
+        <li>D, E, G, I, J zostają odrzuceni w tej rundzie (mogą ponownie złożyć zgłoszenie w następnej rundzie).</li>
+        <li>Po ukończeniu wszystkich tych zamówień → otwiera się kolejka następnej rundy.</li>
+      </ul>
+      <blockquote>
+        <p>Gdyby liczba przyjętych slotów w tej rundzie wynosiła <strong>3</strong>, przyjęte zostałyby tylko pierwsze 3 osoby — <strong>C, F, H</strong> — a wszyscy od A wzwyż zostaliby odrzuceni.</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 Często zadawane pytania</h3>
+      <p class="faq-q"><strong>P. Jestem w starej kolejce — czy muszę osobno zgłosić się do nowej kolejki?</strong></p>
+      <p>Tak. Bycie w starej kolejce nie przesuwa Cię automatycznie. Musisz złożyć zgłoszenie, gdy nowa kolejka zostanie otwarta, a wtedy zostanie zastosowany Twój przywilej priorytetu.</p>
+      <p class="faq-q"><strong>P. Jeśli zostanę odrzucony w tej rundzie, czy mój priorytet w starej kolejce zniknie?</strong></p>
+      <p>Nie. Przywilej jest zużywany tylko <strong>gdy zostaniesz oficjalnie przyjęty do nowej kolejki</strong>. Jeśli zostaniesz odrzucony, pozostajesz w starej kolejce i możesz ponownie użyć przywileju w następnej rundzie.</p>
+      <p class="faq-q"><strong>P. Ile slotów jest przyjmowanych na rundę?</strong></p>
+      <p>Nie jest to stałe. Zmienia się z rundy na rundę — zazwyczaj gdzieś między 2 a 5.</p>
+      <p class="faq-q"><strong>P. Kiedy stara kolejka zostanie całkowicie wyczyszczona?</strong></p>
+      <p>Będzie stopniowo usuwana w kolejnych rundach. Jednak zgłoszenia, gdzie zgłaszający nie może być osiągnięty, mogą być opóźnione.</p>
+      <hr>
+      <p><em>Last updated: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

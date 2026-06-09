@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>UMIN Commission Guide</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans JP", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.1rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0.05rem; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.85; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.85; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.3rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0.05rem; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>コミッションガイド</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="./fr.html">Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="" selected>日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>サーバーに参加</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">目 次</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">前提条件</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">できないこと</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">料金</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">コミッション待機列システム</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">背景</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">用語の整理</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">新待機列の運営ルール</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">優先順位の決定方式</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">既存待機列の優先特典</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">運営サイクル</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">例</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">よくある質問</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>このドキュメントでは、コミッションの前提条件、対応できない作業の範囲、料金、そして申し込みと待機列の運営方式について説明します。</p>
+        <p>コミッションをご依頼される前に一度お読みいただくと、スムーズに進めることができます。</p>
+        <p>このドキュメントは複数の言語で提供されていますが、<strong>コミッション作業中のやりとりは常に英語のみとなりますのでご了承ください</strong>。</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. 前提条件</h2>
+      <ul>
+        <li>すべてのコミッションMODは、私のPatreonでリリースされる他のMODと<strong>同様に配布</strong>されます。<br>
+          つまり、<strong>非公開コミッションは受け付けておりません</strong>。すべてのコミッションは、早期アクセスとして先行公開された後、後日一般公開される流れになります。</li>
+        <li><strong>NSFWモードには対応しておりません。</strong><br>
+          Dead or AliveやThe First Descendantレベルの露出が上限となります。<br>
+          男性・女性の性器の描写は<strong>いかなる場合も絶対に対応できません</strong>。<br>
+          （なお、過度なNSFW描写は韓国では犯罪行為にあたります。）</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. できないこと</h2>
+      <h3 id="facial-expressions">表情が動く顔MODは制作できません。</h3>
+      <blockquote>
+        <p>顔MODの制作自体は可能ですが、コミッションとして安定して提供できるワークフローがまだ整っていません。</p>
+        <p>顔MODは私にとってまだ実験的な段階であり、お金をいただいて制作できるレベルにはありません。</p>
+      </blockquote>
+      <h3 id="new-design">完全に新しいデザインは制作できません。</h3>
+      <blockquote>
+        <p>コンセプトアートのみのデザインや完全なオリジナルデザインには対応できません。最低限、他のゲームから<strong>抽出されたモデル</strong>が必要です。</p>
+        <p>ただし、抽出モデルをご自身でご用意いただく必要はありません。私が自分でモデルを探して抽出する場合がほとんどですので、<strong>該当するモデルが存在するかどうかを正確にご確認いただく</strong>だけで結構です。</p>
+      </blockquote>
+      <h3 id="hair-mod">制作できるヘアMODは非常に限られています。</h3>
+      <blockquote>
+        <p>Stellar BladeやMortal Kombat 1のような比較的新しいゲームで使われている<strong>Haircard方式</strong>のメッシュであれば、クオリティの高い仕上がりが期待できます。</p>
+        <p>しかし、Tekken 7やDOA5/6のような旧式のHair Card方式のヘアは、ヘアメッシュを一から新しくデザインする必要があるため非常に時間がかかり、お金をいただいて完成させる自信がありません。</p>
+        <p>コミッションについてご相談の際は、ぜひこの点をご留意ください。</p>
+      </blockquote>
+      <h3 id="stage-mod">現在、ステージMODは制作できません。</h3>
+      <blockquote>
+        <p>ステージMODは実験中のことが多く、まだ学ぶべきことがたくさんあります。</p>
+        <p>代わりに、将来的には<strong>ステージコミッションを別途オープンする予定</strong>ですので、それまではステージコミッションはお受けしておりません。</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. 料金</h2>
+      <ul>
+        <li>一般的に、<strong>衣装・キャラクターMODで30〜40 USD</strong>が目安です。作業方法や期間によって変動する場合があります。</li>
+        <li>正確な金額は、予想制作期間・方法を考慮した上で<strong>事前にお伝え</strong>します。</li>
+        <li>お支払いは、作業が<strong>半分以上完了したと判断した時点</strong>でお願いしております。</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. コミッション待機列システム</h2>
+      <p>既存のコミッション待機列が過度に長くなり、処理が困難になりました。<br>
+      これを解消するため、<strong>短く維持する新待機列</strong>方式に移行します。</p>
+      <blockquote>
+        <p><strong>基本原則：</strong>既存待機列の優先順位は<strong>何よりも優先</strong>されます。</p>
+        <p>既存待機列に登録されている方は、申し込み順にかかわらず<strong>常に新規申込者より上位</strong>となります。</p>
+      </blockquote>
+      <p>主なポイントは以下の2点です。</p>
+      <ul>
+        <li>一度に受け付ける待機列を<strong>少数</strong>に限定し、回転を速くします。</li>
+        <li>既にお申し込みいただいた方の<strong>優先順位はそのまま保証</strong>します。</li>
+      </ul>
+      <h3 id="41-background">4.1 背景</h3>
+      <ul>
+        <li>待機列が非常に長くなり、6ヶ月〜1年以上前の古い申し込みが多数残っています。</li>
+        <li>古い申し込みほど<strong>連絡が取れないケース</strong>が多く、順番通りに処理しようとしても作業が止まることが頻発していました。</li>
+        <li>現在、新規受付は停止しており、今後は以下の新方式で運営します。</li>
+      </ul>
+      <h3 id="42-terminology">4.2 用語の整理</h3>
+      <table>
+        <thead><tr><th>用語</th><th>意味</th></tr></thead>
+        <tbody>
+          <tr><td><strong>既存待機列</strong></td><td>旧方式で受け付け、まだ処理されていない古い申し込みのリスト。削除せず維持されます。</td></tr>
+          <tr><td><strong>新待機列</strong></td><td>今後、実際の作業が進む短い待機列。1回に採用する人数は少数で、毎回決定されます。</td></tr>
+          <tr><td><strong>優先特典</strong></td><td>既存待機列に登録されている申込者が新待機列でより上位を得られる特典。一度使用すると消滅します。</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 新待機列の運営ルール</h3>
+      <ul>
+        <li>新待機列は<strong>少数のスロット</strong>のみで運営します。</li>
+        <li>短いサイクルで開閉し、素早く回転させます。</li>
+        <li>進行中の作業がすべて終了したら、次の回を再度オープンします。（→ <a href="#46-operating-cycle">4.6 運営サイクル</a>）</li>
+      </ul>
+      <blockquote>
+        <p><strong>参考 — 採用人数は固定値ではありません。</strong></p>
+        <p>このドキュメントに出てくる「5人」はあくまで<strong>例</strong>です。</p>
+        <p>1回に採用する人数は、状況に応じて<strong>2人・3人等、より少なく</strong>設定される場合もあり、毎回その都度決定されます。</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 優先順位の決定方式</h3>
+      <p>新待機列を開いて申し込みを受け付けた後、以下の順序で優先順位を計算します。</p>
+      <p><strong>ステップ1 — 申し込み順で基本順位を付与</strong><br>
+      受け付けたすべての申し込みに対して、<strong>早い申し込み順に</strong>基本順位を付けます。</p>
+      <p><strong>ステップ2 — 既存待機列優先順位の反映（絶対優先）</strong><br>
+      申込者の中で<strong>既存待機列に登録されていた方</strong>は、申し込み順にかかわらず<strong>すべての新規申込者より上</strong>に引き上げられます。</p>
+      <ul>
+        <li>既存待機列保有者は<strong>常に新規申込者より上位</strong>です。</li>
+        <li>既存待機列保有者同士は<strong>既存待機列の順位</strong>順で整列します。</li>
+        <li>新規申込者同士は<strong>申し込み順</strong>で整列します。</li>
+      </ul>
+      <p>最終的な順序は常に<strong>【既存待機列保有者（既存順位順）】→【新規申込者（申し込み順）】</strong>となります。</p>
+      <p><strong>ステップ3 — その回に定めた人数のみ採用</strong><br>
+      上記の過程で整列されたリストから、<strong>その回に定めた採用人数のみ</strong>採用し、残りはその回は不採用となります。<br>
+      （採用人数は固定ではなく、回ごとに異なります → <a href="#43-new-queue-rules">4.3 新待機列の運営ルール</a>の参考事項。）<br>
+      不採用はその回限りで、次の回に再度申し込むことができます。</p>
+      <h3 id="45-priority-benefit">4.5 既存待機列の優先特典</h3>
+      <ul>
+        <li>既存待機列にいる方は、新待機列に申し込む際に<strong>上位を保証</strong>されます。</li>
+        <li>ただし、この特典で<strong>新待機列に正式登録された瞬間</strong>：
+          <ul>
+            <li>その申込者は<strong>既存待機列から削除</strong>されます。</li>
+            <li><strong>優先特典も同時に消滅</strong>します。（1回限り）</li>
+          </ul>
+        </li>
+      </ul>
+      <p>つまり、優先順位は「既存待機列に留まっている間に保証」されるものであり、新待機列に移行した時点で一般申込者と同様に扱われます。</p>
+      <h3 id="46-operating-cycle">4.6 運営サイクル</h3>
+      <ol>
+        <li>新待機列をオープンします。</li>
+        <li>申し込みを受け付け、<a href="#44-priority-system">4.4 優先順位の決定方式</a>に従ってその回の採用人数を決定します。</li>
+        <li>採用された作業を進めます。</li>
+        <li>進行中の作業が<strong>すべて完了したら</strong>、再び1番に戻って新待機列をオープンします。</li>
+      </ol>
+      <p>このサイクルを繰り返すことで、既存待機列も自然に消化されていきます。</p>
+      <h3 id="47-example">4.7 例</h3>
+      <blockquote>
+        <p>以下の例は、その回の採用人数を<strong>5人と仮定</strong>した場合です。</p>
+        <p>前述の通り、この数字は固定ではなく、回ごとに2人・3人などに変わる可能性があります。</p>
+      </blockquote>
+      <p>新待機列をオープンし、<strong>10人（A〜J）</strong>が申し込み順に申し込んだとします。<br>
+      そのうち<strong>C・F・H</strong>が既存待機列に登録されており、既存待機列の順位はそれぞれ<strong>C（1位）・F（2位）・H（5位）</strong>とします。</p>
+      <p><strong>優先順位計算結果：</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">最終順位</th><th style="text-align:center">申込者</th><th>理由</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>既存待機列 1位</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>既存待機列 2位</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>既存待機列 5位</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>新規申込（最初に申し込み）</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>新規申込</td></tr>
+          <tr><td style="text-align:center">6〜</td><td style="text-align:center">D, E, G, I, J</td><td>新規申込 — <strong>今回不採用</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>処理（採用人数を5人と仮定した場合）：</strong></p>
+      <ul>
+        <li>上位5人の<strong>C・F・H・A・B</strong>を採用。</li>
+        <li>C・F・Hは新待機列に登録されたため → <strong>既存待機列から削除 + 優先特典消滅。</strong></li>
+        <li>D・E・G・I・Jは今回不採用（次の回に再申し込み可能）。</li>
+        <li>これらの作業がすべて終了したら → 次の回の待機列を再度オープンします。</li>
+      </ul>
+      <blockquote>
+        <p>もしこの回の採用人数が<strong>3人</strong>だった場合、上位3人の<strong>C・F・H</strong>のみが採用され、Aからは全員不採用となります。</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 よくある質問</h3>
+      <p class="faq-q"><strong>Q. 既存待機列にいますが、新待機列に別途申し込む必要がありますか？</strong></p>
+      <p>はい。既存待機列にいるだけでは自動的に進行しません。新待機列がオープンした際に直接申し込んでいただく必要があり、その際に優先特典が適用されます。</p>
+      <p class="faq-q"><strong>Q. 今回不採用になった場合、既存待機列の優先順位はなくなりますか？</strong></p>
+      <p>いいえ。特典は<strong>新待機列に正式登録された時のみ</strong>消滅します。不採用の場合は既存待機列にそのまま残り、次の回にも特典を使用できます。</p>
+      <p class="faq-q"><strong>Q. 1回に何人受け付けますか？</strong></p>
+      <p>固定されていません。状況に応じて2〜5人程度で、その都度決定されます。</p>
+      <p class="faq-q"><strong>Q. 既存待機列はいつなくなりますか？</strong></p>
+      <p>回を重ねるごとに徐々に消化されます。ただし、連絡が取れない申し込みは処理が遅延する場合があります。</p>
+      <hr>
+      <p><em>Last updated: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

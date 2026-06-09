@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>UMIN Commission Guide</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans Thai", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.05rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 2; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 2; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.7; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.2rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>คู่มือการสั่งงาน</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="./fr.html">Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="" selected>ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>เข้าร่วมเซิร์ฟเวอร์</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">สารบัญ</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">เงื่อนไขเบื้องต้น</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">สิ่งที่ทำไม่ได้</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">ราคา</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">ระบบคิวคอมมิชชัน</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">ความเป็นมา</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">คำศัพท์</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">กฎของคิวใหม่</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">ระบบลำดับความสำคัญ</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">สิทธิ์ลำดับความสำคัญของคิวเก่า</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">รอบการดำเนินงาน</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">ตัวอย่าง</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">คำถามที่พบบ่อย</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>เอกสารนี้อธิบายเงื่อนไขเบื้องต้นสำหรับคอมมิชชัน ขอบเขตงานที่ไม่สามารถทำได้ ราคา และวิธีการดำเนินงานระบบการสมัครและคิว</p>
+        <p>โปรดอ่านก่อนส่งคำขอคอมมิชชัน เพื่อให้กระบวนการดำเนินไปได้อย่างราบรื่น</p>
+        <p>โปรดทราบว่าแม้เอกสารนี้จะมีให้บริการในหลายภาษา แต่<strong>การสื่อสารทั้งหมดระหว่างการทำงานคอมมิชชันจะดำเนินการเป็นภาษาอังกฤษเท่านั้น</strong></p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. เงื่อนไขเบื้องต้น</h2>
+      <ul>
+        <li>MOD คอมมิชชันทั้งหมดจะถูก<strong>เผยแพร่ในลักษณะเดียวกัน</strong>กับ MOD อื่น ๆ ที่ออกในช่อง Patreon ของฉันเสมอ<br>
+          ซึ่งหมายความว่า<strong>คอมมิชชันส่วนตัวไม่สามารถทำได้</strong> คอมมิชชันทั้งหมดจะถูกเผยแพร่เป็นการเข้าถึงล่วงหน้าก่อน แล้วจึงเปิดให้สาธารณะในภายหลัง ซึ่งเป็นขั้นตอนเดียวกับ MOD อื่น ๆ ทั้งหมด</li>
+        <li><strong>ไม่รับ MOD ประเภท NSFW</strong><br>
+          ระดับการเปิดเผยสูงสุดที่อนุญาตคือระดับเดียวกับ Dead or Alive หรือ The First Descendant<br>
+          การแสดงอวัยวะเพศชายหรือหญิง<strong>เป็นสิ่งที่ไม่สามารถทำได้อย่างเด็ดขาดในทุกกรณี</strong><br>
+          (ในส่วนเพิ่มเติม การแสดงเนื้อหา NSFW ที่โจ่งแจ้งถือเป็นความผิดทางอาญาในเกาหลีใต้ด้วย)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. สิ่งที่ทำไม่ได้</h2>
+      <h3 id="facial-expressions">ไม่สามารถสร้าง MOD ใบหน้าที่มีการแสดงอารมณ์ทำงานได้</h3>
+      <blockquote>
+        <p>ฉันสามารถทำ MOD ใบหน้าได้ แต่ยังไม่มีขั้นตอนการทำงานที่เสถียรพอที่จะส่งมอบเป็นคอมมิชชันได้อย่างน่าเชื่อถือ</p>
+        <p>การทำ MOD ใบหน้ายังคงเป็นการทดลองสำหรับฉัน และฉันยังไม่มีความมั่นใจพอที่จะคิดค่าบริการสำหรับสิ่งนี้</p>
+      </blockquote>
+      <h3 id="new-design">ไม่สามารถสร้างดีไซน์ใหม่ทั้งหมดจากศูนย์ได้</h3>
+      <blockquote>
+        <p>ฉันไม่สามารถทำงานจากแนวคิดอาร์ตเพียงอย่างเดียวหรือดีไซน์กำหนดเองล้วน ๆ อย่างน้อยต้องมี<strong>โมเดลที่ดึงออกมา</strong>จากเกมอื่น</p>
+        <p>อย่างไรก็ตาม คุณไม่จำเป็นต้องจัดหาโมเดลที่ดึงออกมาด้วยตัวเอง โดยปกติฉันจะค้นหาและดึงโมเดลเอง ดังนั้นสิ่งที่ฉันขอคือ<strong>ยืนยันอย่างแม่นยำว่าโมเดลดังกล่าวมีอยู่จริงหรือไม่</strong></p>
+      </blockquote>
+      <h3 id="hair-mod">MOD ผมที่ฉันสามารถสร้างได้มีข้อจำกัดมาก</h3>
+      <blockquote>
+        <p>หากต้นฉบับใช้<strong>เมชที่อ้างอิง Haircard</strong>จากเกมที่ค่อนข้างใหม่ เช่น Stellar Blade หรือ Mortal Kombat 1 ฉันสามารถสร้างผลลัพธ์ที่ดีได้</p>
+        <p>อย่างไรก็ตาม สไตล์ Hair Card เก่า เช่น ใน Tekken 7 หรือ DOA5/6 ต้องออกแบบเมชผมใหม่ทั้งหมดจากศูนย์ ซึ่งใช้เวลานานมากและฉันไม่มั่นใจว่าจะส่งมอบผลลัพธ์ที่คุ้มค่าการจ่ายเงินได้</p>
+        <p>โปรดคำนึงถึงสิ่งนี้เมื่อพูดคุยเรื่องคอมมิชชันกับฉัน</p>
+      </blockquote>
+      <h3 id="stage-mod">ปัจจุบันไม่สามารถสร้าง MOD เวที/สเตจได้</h3>
+      <blockquote>
+        <p>การทำ MOD สเตจยังมีหลายอย่างที่ฉันกำลังทดลองและเรียนรู้อยู่</p>
+        <p>แต่ฉันวางแผนที่จะ<strong>เปิดรับคอมมิชชันสเตจแยกต่างหาก</strong>ในอนาคต จนกว่าจะถึงตอนนั้น ฉันจะไม่รับคำขอคอมมิชชันสเตจ</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. ราคา</h2>
+      <ul>
+        <li>โดยทั่วไป <strong>MOD ชุด/ตัวละครราคา 30–40 USD</strong> แม้ว่าราคาอาจแตกต่างกันขึ้นอยู่กับวิธีการและเวลาที่ใช้</li>
+        <li>ราคาที่แน่นอนจะถูกกำหนดล่วงหน้าโดยพิจารณาจากเวลาและวิธีการผลิตที่ประมาณไว้</li>
+        <li>การชำระเงินจะเกิดขึ้นเสมอเมื่อฉันตัดสินว่า<strong>งานเสร็จสิ้นไปกว่าครึ่งแล้ว</strong></li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. ระบบคิวคอมมิชชัน</h2>
+      <p>คิวคอมมิชชันที่มีอยู่ยาวเกินไปจนทำให้เกิดความยากลำบากในการประมวลผล<br>
+      เพื่อแก้ปัญหานี้ ฉันจึงเปลี่ยนไปใช้ระบบ<strong>คิวใหม่แบบสั้นและหมุนเวียน</strong></p>
+      <blockquote>
+        <p><strong>หลักการสำคัญ:</strong> ลำดับความสำคัญของคิวเก่า<strong>เหนือกว่าทุกสิ่ง</strong></p>
+        <p>ผู้ที่ลงทะเบียนในคิวเก่าจะ<strong>มีลำดับสูงกว่าผู้สมัครใหม่เสมอ</strong> ไม่ว่าจะสมัครเมื่อใด</p>
+      </blockquote>
+      <p>สองประเด็นสำคัญ:</p>
+      <ul>
+        <li>คิวรับเพียง<strong>จำนวนน้อย</strong>ในแต่ละครั้ง เพื่อให้หมุนเวียนได้เร็วขึ้น</li>
+        <li><strong>ลำดับความสำคัญของผู้สมัครเดิมได้รับการรับประกันอย่างสมบูรณ์</strong></li>
+      </ul>
+      <h3 id="41-background">4.1 ความเป็นมา</h3>
+      <ul>
+        <li>คิวยาวมากจนมีคำขอหลายรายการที่ค้างมา 6 เดือนถึงกว่า 1 ปี</li>
+        <li>คำขอเก่า ๆ มักจะ<strong>ติดต่อไม่ได้</strong> ซึ่งทำให้กระบวนการหยุดชะงักบ่อยครั้งแม้จะพยายามดำเนินการตามลำดับ</li>
+        <li>ปัจจุบันปิดรับคำขอใหม่ และต่อจากนี้จะดำเนินงานตามระบบใหม่ที่อธิบายด้านล่าง</li>
+      </ul>
+      <h3 id="42-terminology">4.2 คำศัพท์</h3>
+      <table>
+        <thead><tr><th>คำศัพท์</th><th>ความหมาย</th></tr></thead>
+        <tbody>
+          <tr><td><strong>คิวเก่า</strong></td><td>รายการคำขอเก่าที่ยังไม่ได้ประมวลผลซึ่งส่งภายใต้ระบบก่อนหน้า เก็บไว้และไม่ถูกลบ</td></tr>
+          <tr><td><strong>คิวใหม่</strong></td><td>คิวสั้นที่ใช้งานอยู่ซึ่งดำเนินงานจริง รับเพียงจำนวนน้อยต่อรอบ และตัดสินจำนวนในแต่ละรอบ</td></tr>
+          <tr><td><strong>สิทธิ์ลำดับความสำคัญ</strong></td><td>สิทธิ์ใช้ครั้งเดียวที่ช่วยให้ผู้ลงทะเบียนในคิวเก่าได้รับลำดับสูงกว่าผู้สมัครใหม่ในคิวใหม่ ใช้แล้วหมดสิทธิ์</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 กฎของคิวใหม่</h3>
+      <ul>
+        <li>คิวใหม่ดำเนินงานด้วย<strong>จำนวนช่องน้อย</strong>เท่านั้น</li>
+        <li>เปิดและปิดในรอบสั้น ๆ เพื่อให้หมุนเวียนได้รวดเร็ว</li>
+        <li>เมื่องานที่กำลังดำเนินการทั้งหมดเสร็จสิ้น จะเปิดรอบถัดไป (→ <a href="#46-operating-cycle">4.6 รอบการดำเนินงาน</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>หมายเหตุ — จำนวนช่องที่รับไม่ใช่ค่าคงที่</strong></p>
+        <p>ตัวเลข "5" ที่ใช้ในเอกสารนี้เป็นเพียง<strong>ตัวอย่าง</strong>เท่านั้น</p>
+        <p>จำนวนช่องที่รับต่อรอบอาจ<strong>น้อยเพียง 2 หรือ 3</strong> ตัดสินใหม่ในแต่ละรอบ</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 ระบบลำดับความสำคัญ</h3>
+      <p>หลังจากเปิดคิวใหม่และรวบรวมคำสมัคร ลำดับความสำคัญจะถูกคำนวณดังนี้</p>
+      <p><strong>ขั้นตอนที่ 1 — กำหนดอันดับพื้นฐานตามลำดับการสมัคร</strong><br>
+      คำสมัครทั้งหมดจะได้รับอันดับพื้นฐานตาม<strong>ลำดับที่ส่งมา</strong></p>
+      <p><strong>ขั้นตอนที่ 2 — ใช้ลำดับความสำคัญของคิวเก่า (ความสำคัญสูงสุด)</strong><br>
+      ผู้สมัครที่<strong>ลงทะเบียนในคิวเก่า</strong>จะถูกเลื่อน<strong>ขึ้นเหนือผู้สมัครใหม่ทั้งหมด</strong> ไม่ว่าจะสมัครเมื่อใด</p>
+      <ul>
+        <li>ผู้ถือคิวเก่า<strong>มีลำดับสูงกว่าผู้สมัครใหม่เสมอ</strong></li>
+        <li>ในกลุ่มผู้ถือคิวเก่า ลำดับจะถูกกำหนดตาม<strong>ตำแหน่งเดิมในคิวเก่า</strong></li>
+        <li>ในกลุ่มผู้สมัครใหม่ ลำดับจะถูกกำหนดตาม<strong>ลำดับการสมัคร</strong></li>
+      </ul>
+      <p>ลำดับสุดท้ายคือเสมอ: <strong>[ผู้ถือคิวเก่า (ตามอันดับเดิม)] → [ผู้สมัครใหม่ (ตามลำดับการสมัคร)]</strong></p>
+      <p><strong>ขั้นตอนที่ 3 — รับเฉพาะจำนวนช่องที่กำหนดสำหรับรอบนั้น</strong><br>
+      จากรายการที่เรียงลำดับแล้ว จะรับ<strong>เฉพาะจำนวนช่องที่กำหนดสำหรับรอบนั้น</strong> ส่วนที่เหลือจะถูกปฏิเสธสำหรับรอบนี้<br>
+      (จำนวนช่องไม่ใช่ค่าคงที่และแตกต่างกันในแต่ละรอบ — ดูหมายเหตุใน <a href="#43-new-queue-rules">4.3 กฎของคิวใหม่</a>)<br>
+      การปฏิเสธมีผลเฉพาะรอบปัจจุบัน คุณสามารถสมัครใหม่ในรอบถัดไปได้</p>
+      <h3 id="45-priority-benefit">4.5 สิทธิ์ลำดับความสำคัญของคิวเก่า</h3>
+      <ul>
+        <li>ผู้ที่อยู่ในคิวเก่าจะ<strong>ได้รับการรับประกันอันดับสูงกว่า</strong>เมื่อสมัครคิวใหม่</li>
+        <li>อย่างไรก็ตาม เมื่อคุณ<strong>ได้รับการยอมรับอย่างเป็นทางการในคิวใหม่</strong>ผ่านสิทธิ์นี้:
+          <ul>
+            <li>คุณจะถูก<strong>ลบออกจากคิวเก่า</strong></li>
+            <li><strong>สิทธิ์ลำดับความสำคัญก็จะหมดไปด้วย</strong> (ใช้ได้ครั้งเดียว)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>กล่าวอีกนัยหนึ่ง ลำดับความสำคัญได้รับการรับประกัน "ตราบใดที่คุณยังอยู่ในคิวเก่า" เมื่อเข้าสู่คิวใหม่แล้ว คุณจะถูกปฏิบัติเหมือนกับผู้สมัครคนอื่น ๆ</p>
+      <h3 id="46-operating-cycle">4.6 รอบการดำเนินงาน</h3>
+      <ol>
+        <li>เปิดคิวใหม่</li>
+        <li>รวบรวมคำสมัคร และกำหนดช่องที่รับในรอบนั้นตาม <a href="#44-priority-system">4.4 ระบบลำดับความสำคัญ</a></li>
+        <li>ดำเนินงานคอมมิชชันที่ได้รับการยอมรับ</li>
+        <li>เมื่อ<strong>งานที่กำลังดำเนินการทั้งหมดเสร็จสิ้น</strong> กลับไปขั้นตอนที่ 1 และเปิดคิวใหม่อีกครั้ง</li>
+      </ol>
+      <p>การทำซ้ำวงจรนี้จะค่อย ๆ เคลียร์คิวเก่าด้วยเช่นกัน</p>
+      <h3 id="47-example">4.7 ตัวอย่าง</h3>
+      <blockquote>
+        <p>ตัวอย่างด้านล่างสมมติว่าจำนวนช่องที่รับในรอบนี้คือ<strong>5</strong></p>
+        <p>ดังที่อธิบายก่อนหน้านี้ ตัวเลขนี้ไม่ใช่ค่าคงที่และอาจแตกต่างกัน — 2, 3 เป็นต้น — ในแต่ละรอบ</p>
+      </blockquote>
+      <p>สมมติว่าเปิดคิวใหม่และ<strong>10 คน (A–J)</strong> สมัครตามลำดับ<br>
+      ในจำนวนนั้น <strong>C, F และ H</strong> อยู่ในคิวเก่า โดยมีอันดับคิวเก่าเป็น <strong>C (อันดับ 1) · F (อันดับ 2) · H (อันดับ 5)</strong></p>
+      <p><strong>ผลการคำนวณลำดับความสำคัญ:</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">อันดับสุดท้าย</th><th style="text-align:center">ผู้สมัคร</th><th>เหตุผล</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>คิวเก่า — อันดับ 1</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>คิวเก่า — อันดับ 2</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>คิวเก่า — อันดับ 5</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>ผู้สมัครใหม่ (สมัครก่อน)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>ผู้สมัครใหม่</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>ผู้สมัครใหม่ — <strong>ถูกปฏิเสธในรอบนี้</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>ผลลัพธ์ (สมมติว่ารับ 5 ช่อง):</strong></p>
+      <ul>
+        <li>5 อันดับแรก — <strong>C, F, H, A, B</strong> — ได้รับการยอมรับ</li>
+        <li>C, F และ H ได้รับการยอมรับเข้าคิวใหม่ → <strong>ถูกลบออกจากคิวเก่า + สิทธิ์ลำดับความสำคัญหมด</strong></li>
+        <li>D, E, G, I, J ถูกปฏิเสธในรอบนี้ (สามารถสมัครใหม่ในรอบถัดไปได้)</li>
+        <li>เมื่อคอมมิชชันเหล่านี้เสร็จสิ้นทั้งหมด → เปิดคิวรอบถัดไป</li>
+      </ul>
+      <blockquote>
+        <p>หากจำนวนช่องที่รับในรอบนี้คือ<strong>3</strong> จะรับเฉพาะ 3 อันดับแรก — <strong>C, F, H</strong> — และทุกคนตั้งแต่ A จะถูกปฏิเสธ</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 คำถามที่พบบ่อย</h3>
+      <p class="faq-q"><strong>ถ. ฉันอยู่ในคิวเก่า — ต้องสมัครคิวใหม่แยกต่างหากหรือไม่?</strong></p>
+      <p>ใช่ การอยู่ในคิวเก่าไม่ได้ทำให้คุณก้าวหน้าโดยอัตโนมัติ คุณต้องสมัครเมื่อเปิดคิวใหม่ ซึ่งเมื่อนั้นสิทธิ์ลำดับความสำคัญของคุณจะถูกนำมาใช้</p>
+      <p class="faq-q"><strong>ถ. ถ้าถูกปฏิเสธในรอบนี้ สิทธิ์ลำดับความสำคัญในคิวเก่าของฉันจะหายไปหรือไม่?</strong></p>
+      <p>ไม่ สิทธิ์จะถูกใช้เฉพาะ<strong>เมื่อคุณได้รับการยอมรับอย่างเป็นทางการในคิวใหม่</strong>เท่านั้น หากถูกปฏิเสธ คุณยังคงอยู่ในคิวเก่าและสามารถใช้สิทธิ์อีกครั้งในรอบถัดไป</p>
+      <p class="faq-q"><strong>ถ. รับกี่ช่องต่อรอบ?</strong></p>
+      <p>ไม่ใช่ค่าคงที่ แตกต่างกันในแต่ละรอบ — โดยทั่วไปอยู่ระหว่าง 2 ถึง 5</p>
+      <p class="faq-q"><strong>ถ. คิวเก่าจะหมดเมื่อไหร่?</strong></p>
+      <p>จะค่อย ๆ ถูกเคลียร์ในหลายรอบต่อเนื่อง อย่างไรก็ตาม คำขอที่ไม่สามารถติดต่อผู้สมัครได้อาจล่าช้า</p>
+      <hr>
+      <p><em>Last updated: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>UMIN Commission Guide</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans Arabic", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0; margin: 1.5rem 0 0.4rem; border-left: none; padding-left: 0; border-right: 3px solid rgba(77,73,62,0.5); padding-right: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.9; }
+    ul, ol { padding-right: 1.5rem; padding-left: 0; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.9; }
+    blockquote { border-left: none; border-right: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: right; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: -3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-right: 1.8rem !important; padding-left: 0 !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>دليل التكليفات</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="./fr.html">Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="" selected>العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>الانضمام إلى السيرفر</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">المحتويات</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">المتطلبات الأساسية</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">ما لا أستطيع فعله</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">الأسعار</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">نظام قائمة انتظار التكليفات</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">الخلفية</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">المصطلحات</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">قواعد القائمة الجديدة</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">نظام الأولوية</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">ميزة أولوية القائمة القديمة</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">دورة التشغيل</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">مثال</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">الأسئلة الشائعة</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>يشرح هذا المستند المتطلبات الأساسية للتكليفات، ونطاق العمل الذي لا أستطيع القيام به، والأسعار، وكيفية عمل نظام التقديم والقائمة.</p>
+        <p>يُرجى قراءة هذا قبل تقديم طلب التكليف — سيجعل ذلك العملية أكثر سلاسة.</p>
+        <p>يُرجى ملاحظة أنه على الرغم من توفر هذا المستند بلغات متعددة، <strong>يتم إجراء جميع الاتصالات أثناء عمل التكليف باللغة الإنجليزية حصراً</strong>.</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. المتطلبات الأساسية</h2>
+      <ul>
+        <li>يتم دائماً <strong>توزيع جميع المودات المُكلَّفة بنفس الطريقة</strong> كغيرها من المودات الصادرة على Patreon الخاص بي.<br>
+          هذا يعني أن <strong>التكليفات الخاصة غير ممكنة</strong>. يتم إصدار جميع التكليفات أولاً كوصول مبكر، ثم تُتاح للعموم لاحقاً — تماماً كأي مود آخر.</li>
+        <li><strong>مودات NSFW غير متاحة.</strong><br>
+          الحد الأقصى المسموح به من المحتوى المكشوف مشابه لما يُرى في Dead or Alive أو The First Descendant.<br>
+          تصوير الأعضاء التناسلية الذكورية أو الأنثوية <strong>مستحيل تماماً في جميع الأحوال</strong>.<br>
+          (كملاحظة جانبية، المحتوى الصريح NSFW يُعدّ أيضاً جريمة في كوريا الجنوبية.)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. ما لا أستطيع فعله</h2>
+      <h3 id="facial-expressions">لا أستطيع إنشاء مودات وجه بتعابير وجه تعمل.</h3>
+      <blockquote>
+        <p>أنا قادر على تعديل الوجه، لكنني لا أمتلك بعد سير عمل مستقراً لتقديمه بشكل موثوق كتكليف.</p>
+        <p>تعديل الوجه لا يزال تجريبياً بالنسبة لي، ولست على مستوى يجعلني مرتاحاً للتقاضي عليه.</p>
+      </blockquote>
+      <h3 id="new-design">لا أستطيع إنشاء تصاميم أصلية كاملة.</h3>
+      <blockquote>
+        <p>لا أستطيع العمل من الرسوم التصورية وحدها أو التصاميم المخصصة البحتة. على الأقل، يلزم وجود <strong>نموذج مستخرج</strong> من لعبة أخرى.</p>
+        <p>مع ذلك، لا تحتاج إلى توفير النموذج المستخرج بنفسك. عادةً ما أقوم بتحديد النموذج واستخراجه بنفسي، لذا كل ما أطلبه هو أن <strong>تؤكد بدقة ما إذا كان مثل هذا النموذج موجوداً</strong>.</p>
+      </blockquote>
+      <h3 id="hair-mod">مودات الشعر التي أستطيع إنشاؤها محدودة جداً.</h3>
+      <blockquote>
+        <p>إذا كان المصدر يستخدم <strong>شبكة قائمة على Haircard</strong> من لعبة حديثة نسبياً — مثل Stellar Blade أو Mortal Kombat 1 — أستطيع تحقيق نتائج رائعة.</p>
+        <p>ومع ذلك، تتطلب أساليب Hair Card الأقدم — كتلك الموجودة في Tekken 7 أو DOA5/6 — تصميم شبكة شعر جديدة كلياً من الصفر. يستغرق هذا وقتاً طويلاً جداً، ولست واثقاً من قدرتي على تقديم نتيجة تستحق الدفع.</p>
+        <p>يُرجى مراعاة ذلك عند مناقشة تكليفك معي.</p>
+      </blockquote>
+      <h3 id="stage-mod">لا أستطيع حالياً إنشاء مودات المراحل.</h3>
+      <blockquote>
+        <p>لا يزال تعديل المراحل يحتوي على الكثير من الأشياء التي أجربها وأتعلمها.</p>
+        <p>بدلاً من ذلك، أخطط <strong>لفتح تكليفات المراحل بشكل منفصل</strong> في المستقبل — حتى ذلك الحين، لا أقبل طلبات تكليف المراحل.</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. الأسعار</h2>
+      <ul>
+        <li>بشكل عام، <strong>30–40 دولار أمريكي لمودات الملابس/الشخصيات</strong>، وإن كان السعر قد يتفاوت تبعاً للطريقة والوقت المطلوب.</li>
+        <li>يُحدَّد السعر الدقيق مسبقاً، مع مراعاة الوقت والطريقة المقدَّرين للإنتاج.</li>
+        <li>يتم الدفع دائماً عندما أقرر أن <strong>أكثر من نصف العمل مكتمل</strong>.</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. نظام قائمة انتظار التكليفات</h2>
+      <p>أصبحت قائمة انتظار التكليفات الحالية طويلة بشكل مفرط، مما تسبب في صعوبات في المعالجة.<br>
+      لمعالجة هذا، أنتقل إلى نظام <strong>قائمة انتظار جديدة قصيرة متناوبة</strong>.</p>
+      <blockquote>
+        <p><strong>المبدأ الأساسي:</strong> أولوية القائمة القديمة <strong>فوق كل شيء</strong>.</p>
+        <p>المسجلون في القائمة القديمة <strong>سيحتلون دائماً مرتبة أعلى من المتقدمين الجدد</strong>، بصرف النظر عن ترتيب التقديم.</p>
+      </blockquote>
+      <p>النقطتان الرئيسيتان هما:</p>
+      <ul>
+        <li>تقبل القائمة فقط <strong>عدداً صغيراً</strong> من الخانات في كل مرة، مما يتيح دورانًا أسرع.</li>
+        <li><strong>يُحفظ كاملاً أولوية المتقدمين السابقين</strong>.</li>
+      </ul>
+      <h3 id="41-background">4.1 الخلفية</h3>
+      <ul>
+        <li>أصبحت القائمة طويلة جداً لدرجة أن كثيراً من الطلبات كانت معلقة من 6 أشهر إلى أكثر من عام.</li>
+        <li>الطلبات الأقدم أكثر احتمالاً أن تكون <strong>غير قابلة للتواصل</strong>، مما كثيراً ما كان يوقف العملية حتى عندما حاولت المضي بالترتيب.</li>
+        <li>الطلبات الجديدة مغلقة حالياً، وسأعمل وفق النظام الجديد الموضح أدناه.</li>
+      </ul>
+      <h3 id="42-terminology">4.2 المصطلحات</h3>
+      <table>
+        <thead><tr><th>المصطلح</th><th>المعنى</th></tr></thead>
+        <tbody>
+          <tr><td><strong>القائمة القديمة</strong></td><td>قائمة الطلبات القديمة غير المعالجة المقدَّمة في إطار النظام السابق. تُحفظ ولا تُحذف.</td></tr>
+          <tr><td><strong>القائمة الجديدة</strong></td><td>القائمة النشطة القصيرة حيث تُعالَج الأعمال الفعلية. يُقبل عدد صغير فقط من الخانات لكل جولة، ويُحدَّد العدد في كل جولة.</td></tr>
+          <tr><td><strong>ميزة الأولوية</strong></td><td>ميزة لمرة واحدة تتيح للمسجلين في القائمة القديمة احتلال مرتبة أعلى من المتقدمين الجدد في القائمة الجديدة. تُستهلك عند الاستخدام.</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 قواعد القائمة الجديدة</h3>
+      <ul>
+        <li>تعمل القائمة الجديدة بـ<strong>عدد صغير فقط من الخانات</strong>.</li>
+        <li>تفتح وتغلق في دورات قصيرة، مما يحافظ على دوران سريع.</li>
+        <li>بمجرد اكتمال جميع التكليفات النشطة، تُفتح الجولة التالية. (← <a href="#46-operating-cycle">4.6 دورة التشغيل</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>ملاحظة — عدد الخانات المقبولة ليس ثابتاً.</strong></p>
+        <p>الرقم "5" المستخدم في هذا المستند هو مجرد <strong>مثال</strong>.</p>
+        <p>قد يكون عدد الخانات المقبولة لكل جولة <strong>2 أو 3 فقط</strong>، ويُقرَّر من جديد في كل جولة.</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 نظام الأولوية</h3>
+      <p>بعد فتح القائمة الجديدة وجمع الطلبات، تُحسَب الأولوية على النحو التالي.</p>
+      <p><strong>الخطوة 1 — تعيين الترتيب الأساسي حسب ترتيب التقديم</strong><br>
+      تحصل جميع الطلبات على ترتيب أساسي بناءً على <strong>الترتيب الذي قُدِّمت به</strong>.</p>
+      <p><strong>الخطوة 2 — تطبيق أولوية القائمة القديمة (الأسبقية المطلقة)</strong><br>
+      أي متقدم كان <strong>مسجلاً في القائمة القديمة</strong> يُنقل <strong>فوق جميع المتقدمين الجدد</strong>، بصرف النظر عن وقت تقديمه.</p>
+      <ul>
+        <li>حاملو القائمة القديمة <strong>يحتلون دائماً مرتبة أعلى من المتقدمين الجدد</strong>.</li>
+        <li>بين حاملي القائمة القديمة، يُحدَّد الترتيب بناءً على <strong>مرتبتهم الأصلية في القائمة القديمة</strong>.</li>
+        <li>بين المتقدمين الجدد، يُحدَّد الترتيب بناءً على <strong>ترتيب التقديم</strong>.</li>
+      </ul>
+      <p>الترتيب النهائي دائماً: <strong>[حاملو القائمة القديمة (حسب الترتيب الأصلي)] ← [المتقدمون الجدد (حسب ترتيب التقديم)]</strong>.</p>
+      <p><strong>الخطوة 3 — قبول عدد الخانات المحدد لتلك الجولة فقط</strong><br>
+      من القائمة المُرتَّبة، تُقبل <strong>عدد الخانات المحدد لتلك الجولة فقط</strong>؛ والباقون مرفوضون لهذه الجولة.<br>
+      (عدد الخانات ليس ثابتاً ويتفاوت في كل جولة — انظر الملاحظة في <a href="#43-new-queue-rules">4.3 قواعد القائمة الجديدة</a>.)<br>
+      الرفض لهذه الجولة فقط؛ يمكنك إعادة التقديم في الجولة التالية.</p>
+      <h3 id="45-priority-benefit">4.5 ميزة أولوية القائمة القديمة</h3>
+      <ul>
+        <li>المسجلون في القائمة القديمة <strong>مضمون لهم ترتيب أعلى</strong> عند التقديم للقائمة الجديدة.</li>
+        <li>ومع ذلك، في اللحظة التي تُقبل فيها <strong>رسمياً في القائمة الجديدة</strong> من خلال هذه الميزة:
+          <ul>
+            <li>يتم <strong>حذفك من القائمة القديمة</strong>.</li>
+            <li><strong>تُستهلك ميزة الأولوية أيضاً</strong>. (استخدام لمرة واحدة)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>بمعنى آخر، الأولوية مضمونة "طالما بقيت في القائمة القديمة." بمجرد انتقالك إلى القائمة الجديدة، تُعامَل كأي متقدم آخر.</p>
+      <h3 id="46-operating-cycle">4.6 دورة التشغيل</h3>
+      <ol>
+        <li>تُفتح القائمة الجديدة.</li>
+        <li>تُجمَع الطلبات، وتُحدَّد الخانات المقبولة لتلك الجولة وفقاً لـ<a href="#44-priority-system">4.4 نظام الأولوية</a>.</li>
+        <li>تُنجز التكليفات المقبولة.</li>
+        <li>بمجرد <strong>اكتمال جميع الأعمال النشطة</strong>، عُد إلى الخطوة 1 وافتح القائمة الجديدة مرة أخرى.</li>
+      </ol>
+      <p>تكرار هذه الدورة يُفرغ القائمة القديمة تدريجياً أيضاً.</p>
+      <h3 id="47-example">4.7 مثال</h3>
+      <blockquote>
+        <p>يفترض المثال أدناه أن عدد الخانات المقبولة في الجولة هو <strong>5</strong>.</p>
+        <p>كما أُوضح سابقاً، هذا الرقم ليس ثابتاً وقد يتفاوت — 2، 3، إلخ. — في كل جولة.</p>
+      </blockquote>
+      <p>افترض أن القائمة الجديدة فُتحت وقدَّم <strong>10 أشخاص (A–J)</strong> طلباتهم بالترتيب.<br>
+      من بينهم، كان <strong>C وF وH</strong> في القائمة القديمة، بترتيبات <strong>C (1) · F (2) · H (5)</strong>.</p>
+      <p><strong>نتيجة حساب الأولوية:</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">الترتيب النهائي</th><th style="text-align:center">المتقدم</th><th>السبب</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>القائمة القديمة — المرتبة 1</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>القائمة القديمة — المرتبة 2</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>القائمة القديمة — المرتبة 5</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>متقدم جديد (قدَّم أولاً)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>متقدم جديد</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>متقدم جديد — <strong>مرفوض في هذه الجولة</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>النتيجة (بافتراض 5 خانات مقبولة):</strong></p>
+      <ul>
+        <li>أول 5 — <strong>C وF وH وA وB</strong> — مقبولون.</li>
+        <li>قُبل C وF وH في القائمة الجديدة ← <strong>محذوفون من القائمة القديمة + ميزة الأولوية مستهلكة</strong>.</li>
+        <li>D وE وG وI وJ مرفوضون في هذه الجولة (يمكنهم إعادة التقديم في الجولة التالية).</li>
+        <li>بمجرد اكتمال جميع هذه التكليفات ← تُفتح قائمة الجولة التالية.</li>
+      </ul>
+      <blockquote>
+        <p>لو كان عدد الخانات المقبولة في هذه الجولة <strong>3</strong>، لقُبل أول 3 فقط — <strong>C وF وH</strong> — وسيُرفض الجميع من A فصاعداً.</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 الأسئلة الشائعة</h3>
+      <p class="faq-q"><strong>س. أنا في القائمة القديمة — هل أحتاج إلى التقديم للقائمة الجديدة بشكل منفصل؟</strong></p>
+      <p>نعم. الوجود في القائمة القديمة لا يُقدِّمك تلقائياً. يجب عليك التقديم عند فتح القائمة الجديدة، وعندها ستُطبَّق ميزة الأولوية الخاصة بك.</p>
+      <p class="faq-q"><strong>س. إذا رُفضت في هذه الجولة، هل تختفي أولويتي في القائمة القديمة؟</strong></p>
+      <p>لا. تُستهلك الميزة فقط <strong>عند قبولك رسمياً في القائمة الجديدة</strong>. إذا رُفضت، تبقى في القائمة القديمة ويمكنك استخدام الميزة مرة أخرى في الجولة التالية.</p>
+      <p class="faq-q"><strong>س. كم عدد الخانات المقبولة لكل جولة؟</strong></p>
+      <p>ليس ثابتاً. يتفاوت من جولة إلى أخرى — عادةً بين 2 و5.</p>
+      <p class="faq-q"><strong>س. متى ستُفرَّغ القائمة القديمة بالكامل؟</strong></p>
+      <p>ستُفرَّغ تدريجياً عبر الجولات المتتالية. ومع ذلك، قد تتأخر الطلبات التي يتعذر التواصل مع أصحابها.</p>
+      <hr>
+      <p><em>Last updated: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

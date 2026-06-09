@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Guide des Commissions UMIN</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.15rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1rem; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.75; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.75; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.4rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0.05rem; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>Guide des Commissions</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="" selected>Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>Rejoindre le serveur</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">Sommaire</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">Prérequis</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">Ce que je ne peux pas faire</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">Tarifs</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">Système de file d'attente</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">Contexte</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">Terminologie</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">Règles de la nouvelle file</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">Système de priorité</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">Avantage prioritaire de la file héritée</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">Cycle de fonctionnement</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">Exemple</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">FAQ</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>Ce document explique les prérequis pour les commissions, ce que je ne peux pas faire, les tarifs, et le fonctionnement du système de candidature et de file d'attente.</p>
+        <p>Merci de le lire avant de soumettre une demande de commission — cela facilitera grandement le processus.</p>
+        <p>Veuillez noter que même si ce document est disponible en plusieurs langues, <strong>toutes les communications durant le travail de commission se font uniquement en anglais</strong>.</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. Prérequis</h2>
+      <ul>
+        <li>Tous les mods commandés sont toujours <strong>distribués de la même manière</strong> que les autres mods publiés sur mon Patreon.<br>
+          Cela signifie que <strong>les commissions privées sont impossibles</strong>. Toutes les commissions sont d'abord publiées en accès anticipé, puis rendues publiques — comme tout autre mod.</li>
+        <li><strong>Les mods NSFW ne sont pas disponibles.</strong><br>
+          L'exposition jusqu'au niveau de Dead or Alive ou The First Descendant est le maximum autorisé.<br>
+          La représentation des organes génitaux masculins ou féminins est <strong>absolument impossible en toutes circonstances</strong>.<br>
+          (À titre informatif, les représentations NSFW explicites sont également une infraction pénale en Corée du Sud.)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. Ce que je ne peux pas faire</h2>
+      <h3 id="facial-expressions">Je ne peux pas créer de mods de visage avec des expressions faciales fonctionnelles.</h3>
+      <blockquote>
+        <p>Je suis capable de faire du face modding, mais je n'ai pas encore de flux de travail stable pour le livrer de manière fiable en tant que commission.</p>
+        <p>Le face modding est toujours expérimental pour moi, et je ne suis pas à un niveau où je me sens à l'aise pour le facturer.</p>
+      </blockquote>
+      <h3 id="new-design">Je ne peux pas créer de designs entièrement originaux.</h3>
+      <blockquote>
+        <p>Je ne peux pas travailler uniquement à partir de concept art ou de designs personnalisés purs. Au minimum, un <strong>modèle extrait</strong> d'un autre jeu est requis.</p>
+        <p>Cela dit, vous n'avez pas besoin de fournir le modèle extrait vous-même. Je localise et extrais généralement le modèle moi-même, je vous demande seulement de <strong>confirmer avec précision si un tel modèle existe</strong>.</p>
+      </blockquote>
+      <h3 id="hair-mod">Les mods de cheveux que je peux créer sont très limités.</h3>
+      <blockquote>
+        <p>Si la source utilise un <strong>mesh basé sur Haircard</strong> d'un jeu relativement récent — comme Stellar Blade ou Mortal Kombat 1 — je peux produire d'excellents résultats.</p>
+        <p>Cependant, les anciens styles Hair Card — comme ceux de Tekken 7 ou DOA5/6 — nécessitent la conception d'un nouveau mesh de cheveux entièrement de zéro. Cela prend beaucoup trop de temps, et je ne suis pas sûr de pouvoir livrer un résultat qui vaut le coup de facturer.</p>
+        <p>Gardez cela à l'esprit lorsque vous discutez de votre commission avec moi.</p>
+      </blockquote>
+      <h3 id="stage-mod">Je ne peux pas créer de mods de scène pour le moment.</h3>
+      <blockquote>
+        <p>Le stage modding est encore un domaine où j'expérimente et j'apprends beaucoup.</p>
+        <p>À la place, je prévois d'<strong>ouvrir les commissions de scène séparément</strong> à l'avenir — d'ici là, je n'accepte pas les demandes de commission de scène.</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. Tarifs</h2>
+      <ul>
+        <li>En général, <strong>30–40 USD pour les mods de tenues/personnages</strong>, bien que le prix puisse varier selon la méthode et le temps requis.</li>
+        <li>Le prix exact est déterminé à l'avance, en tenant compte du temps estimé et de la méthode de production.</li>
+        <li>Le paiement est toujours effectué une fois que je détermine que <strong>plus de la moitié du travail est terminée</strong>.</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. Système de file d'attente</h2>
+      <p>La file d'attente des commissions existante est devenue excessivement longue, causant des difficultés de traitement.<br>
+      Pour remédier à cela, je passe à un système de <strong>nouvelle file d'attente courte et rotative</strong>.</p>
+      <blockquote>
+        <p><strong>Principe fondamental :</strong> La priorité de la file d'attente héritée est <strong>avant tout</strong>.</p>
+        <p>Ceux inscrits dans la file d'attente héritée seront <strong>toujours classés avant les nouveaux candidats</strong>, quel que soit l'ordre de candidature.</p>
+      </blockquote>
+      <p>Les deux points clés sont :</p>
+      <ul>
+        <li>La file d'attente n'accepte qu'un <strong>petit nombre</strong> de créneaux à la fois, permettant une rotation plus rapide.</li>
+        <li>La <strong>priorité des candidats précédents est entièrement préservée</strong>.</li>
+      </ul>
+      <h3 id="41-background">4.1 Contexte</h3>
+      <ul>
+        <li>La file d'attente est devenue si longue que de nombreuses demandes attendent depuis 6 mois à plus d'un an.</li>
+        <li>Les demandes plus anciennes sont plus susceptibles d'être <strong>injoignables</strong>, ce qui a souvent bloqué le processus même lorsque j'essayais de procéder dans l'ordre.</li>
+        <li>Les nouvelles candidatures sont actuellement fermées, et à l'avenir j'opérerai selon le nouveau système décrit ci-dessous.</li>
+      </ul>
+      <h3 id="42-terminology">4.2 Terminologie</h3>
+      <table>
+        <thead><tr><th>Terme</th><th>Signification</th></tr></thead>
+        <tbody>
+          <tr><td><strong>File héritée</strong></td><td>La liste des anciennes demandes non traitées soumises sous l'ancien système. Elle est conservée et non supprimée.</td></tr>
+          <tr><td><strong>Nouvelle file</strong></td><td>La file d'attente courte et active où le vrai travail est traité. Seul un petit nombre de créneaux sont acceptés par tour, et le nombre est déterminé à chaque tour.</td></tr>
+          <tr><td><strong>Avantage prioritaire</strong></td><td>Un avantage à usage unique permettant aux inscrits de la file héritée de se classer avant les nouveaux candidats dans la nouvelle file. Il est consommé une fois utilisé.</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 Règles de la nouvelle file</h3>
+      <ul>
+        <li>La nouvelle file ne fonctionne qu'avec un <strong>petit nombre de créneaux</strong>.</li>
+        <li>Elle s'ouvre et se ferme sur de courts cycles, maintenant une rotation rapide.</li>
+        <li>Une fois toutes les commissions actives terminées, le tour suivant s'ouvre. (→ <a href="#46-operating-cycle">4.6 Cycle de fonctionnement</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>Remarque — Le nombre de créneaux acceptés n'est pas fixe.</strong></p>
+        <p>Le nombre « 5 » utilisé dans ce document est purement un <strong>exemple</strong>.</p>
+        <p>Le nombre de créneaux acceptés par tour peut être <strong>aussi peu que 2 ou 3</strong>, décidé à nouveau à chaque tour.</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 Système de priorité</h3>
+      <p>Après ouverture de la nouvelle file et collecte des candidatures, la priorité est calculée comme suit.</p>
+      <p><strong>Étape 1 — Attribuer le classement de base par ordre de candidature</strong><br>
+      Toutes les candidatures reçoivent un rang de base basé sur <strong>l'ordre dans lequel elles ont été soumises</strong>.</p>
+      <p><strong>Étape 2 — Appliquer la priorité de la file héritée (préséance absolue)</strong><br>
+      Tout candidat qui était <strong>inscrit dans la file héritée</strong> est déplacé <strong>au-dessus de tous les nouveaux candidats</strong>, quel que soit le moment de sa candidature.</p>
+      <ul>
+        <li>Les détenteurs de file héritée sont toujours <strong>classés avant les nouveaux candidats</strong>.</li>
+        <li>Parmi les détenteurs de file héritée, le rang est déterminé par leur <strong>position d'origine dans la file héritée</strong>.</li>
+        <li>Parmi les nouveaux candidats, le rang est déterminé par <strong>l'ordre de candidature</strong>.</li>
+      </ul>
+      <p>L'ordre final est toujours : <strong>[Détenteurs de file héritée (par rang d'origine)] → [Nouveaux candidats (par ordre de candidature)]</strong>.</p>
+      <p><strong>Étape 3 — N'accepter que le nombre de créneaux fixé pour ce tour</strong><br>
+      De la liste triée, <strong>seul le nombre de créneaux fixé pour ce tour</strong> est accepté ; le reste est rejeté pour ce tour.<br>
+      (Le nombre de créneaux n'est pas fixe et varie à chaque tour — voir la note dans <a href="#43-new-queue-rules">4.3 Règles de la nouvelle file</a>.)<br>
+      Le rejet ne vaut que pour le tour actuel ; vous pouvez vous réinscrire au prochain tour.</p>
+      <h3 id="45-priority-benefit">4.5 Avantage prioritaire de la file héritée</h3>
+      <ul>
+        <li>Ceux dans la file héritée bénéficient d'un <strong>rang plus élevé garanti</strong> lors de leur candidature à la nouvelle file.</li>
+        <li>Cependant, au moment où vous êtes <strong>officiellement accepté dans la nouvelle file</strong> grâce à cet avantage :
+          <ul>
+            <li>Vous êtes <strong>retiré de la file héritée</strong>.</li>
+            <li>L'<strong>avantage prioritaire est également consommé</strong>. (Usage unique)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>En d'autres termes, la priorité est garantie « tant que vous restez dans la file héritée. » Une fois que vous passez à la nouvelle file, vous êtes traité comme n'importe quel autre candidat.</p>
+      <h3 id="46-operating-cycle">4.6 Cycle de fonctionnement</h3>
+      <ol>
+        <li>La nouvelle file s'ouvre.</li>
+        <li>Les candidatures sont collectées, et les créneaux acceptés pour ce tour sont déterminés selon <a href="#44-priority-system">4.4 Système de priorité</a>.</li>
+        <li>Les commissions acceptées sont traitées.</li>
+        <li>Une fois <strong>tout le travail actif terminé</strong>, retour à l'étape 1 et ouverture de la nouvelle file.</li>
+      </ol>
+      <p>Répéter ce cycle permet d'éliminer progressivement la file héritée également.</p>
+      <h3 id="47-example">4.7 Exemple</h3>
+      <blockquote>
+        <p>L'exemple ci-dessous suppose que le nombre de créneaux acceptés pour ce tour est <strong>5</strong>.</p>
+        <p>Comme expliqué précédemment, ce nombre n'est pas fixe et peut varier — 2, 3, etc. — à chaque tour.</p>
+      </blockquote>
+      <p>Supposons que la nouvelle file s'ouvre et que <strong>10 personnes (A–J)</strong> postulent dans l'ordre.<br>
+      Parmi elles, <strong>C, F et H</strong> étaient dans la file héritée, avec des rangs hérités de <strong>C (1er) · F (2e) · H (5e)</strong>.</p>
+      <p><strong>Résultat du calcul de priorité :</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">Rang final</th><th style="text-align:center">Candidat</th><th>Raison</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>File héritée — 1er</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>File héritée — 2e</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>File héritée — 5e</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>Nouveau candidat (a postulé en premier)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>Nouveau candidat</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>Nouveau candidat — <strong>rejeté ce tour</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Résultat (en supposant 5 créneaux acceptés) :</strong></p>
+      <ul>
+        <li>Top 5 — <strong>C, F, H, A, B</strong> — sont acceptés.</li>
+        <li>C, F et H ont été acceptés dans la nouvelle file → <strong>retirés de la file héritée + avantage prioritaire consommé</strong>.</li>
+        <li>D, E, G, I, J sont rejetés ce tour (peuvent se réinscrire au prochain tour).</li>
+        <li>Une fois toutes ces commissions terminées → la nouvelle file du tour suivant s'ouvre.</li>
+      </ul>
+      <blockquote>
+        <p>Si le nombre de créneaux acceptés pour ce tour était <strong>3</strong>, seuls les 3 premiers — <strong>C, F, H</strong> — seraient acceptés, et tout le monde à partir de A serait rejeté.</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 Questions fréquentes (FAQ)</h3>
+      <p class="faq-q"><strong>Q. Je suis dans la file héritée — dois-je postuler séparément à la nouvelle file ?</strong></p>
+      <p>Oui. Être dans la file héritée ne vous fait pas avancer automatiquement. Vous devez postuler à l'ouverture de la nouvelle file, moment auquel votre avantage prioritaire sera appliqué.</p>
+      <p class="faq-q"><strong>Q. Si je suis rejeté ce tour, ma priorité de file héritée disparaît-elle ?</strong></p>
+      <p>Non. L'avantage n'est consommé que <strong>lorsque vous êtes officiellement accepté dans la nouvelle file</strong>. Si rejeté, vous restez dans la file héritée et pouvez utiliser l'avantage à nouveau au prochain tour.</p>
+      <p class="faq-q"><strong>Q. Combien de créneaux sont acceptés par tour ?</strong></p>
+      <p>Ce n'est pas fixe. Cela varie tour par tour — généralement entre 2 et 5.</p>
+      <p class="faq-q"><strong>Q. Quand la file héritée sera-t-elle entièrement vidée ?</strong></p>
+      <p>Elle sera progressivement vidée au fil des tours successifs. Cependant, les demandes où le candidat est injoignable peuvent être retardées.</p>
+      <hr>
+      <p><em>Dernière mise à jour : 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

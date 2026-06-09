@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Guía de Comisiones UMIN</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.15rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1rem; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.75; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.75; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.4rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0.05rem; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>Guía de Comisiones</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="./fr.html">Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="" selected>Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>Unirse al servidor</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">Índice</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">Prerrequisitos</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">Lo que no puedo hacer</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">Precios</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">Sistema de cola de comisiones</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">Contexto</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">Terminología</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">Reglas de la cola nueva</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">Sistema de prioridad</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">Beneficio de prioridad de la cola heredada</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">Ciclo de funcionamiento</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">Ejemplo</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">Preguntas frecuentes (FAQ)</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>Este documento explica los prerrequisitos para las comisiones, lo que no puedo hacer, los precios y cómo funciona el sistema de solicitud y cola.</p>
+        <p>Por favor, léalo antes de enviar una solicitud de comisión — facilitará considerablemente el proceso.</p>
+        <p>Tenga en cuenta que aunque este documento está disponible en varios idiomas, <strong>toda la comunicación durante el trabajo de comisión se realiza únicamente en inglés</strong>.</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. Prerrequisitos</h2>
+      <ul>
+        <li>Todos los mods encargados se distribuyen siempre de la <strong>misma manera</strong> que los demás mods publicados en mi Patreon.<br>
+          Esto significa que <strong>las comisiones privadas no son posibles</strong>. Todas las comisiones se publican primero como acceso anticipado y luego se hacen públicas — igual que cualquier otro mod.</li>
+        <li><strong>Los mods NSFW no están disponibles.</strong><br>
+          El nivel de exposición de Dead or Alive o The First Descendant es el máximo permitido.<br>
+          La representación de genitales masculinos o femeninos es <strong>absolutamente imposible bajo ninguna circunstancia</strong>.<br>
+          (Como nota adicional, las representaciones NSFW explícitas también constituyen un delito penal en Corea del Sur.)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. Lo que no puedo hacer</h2>
+      <h3 id="facial-expressions">No puedo crear mods de rostro con expresiones faciales funcionales.</h3>
+      <blockquote>
+        <p>Soy capaz de hacer face modding, pero todavía no tengo un flujo de trabajo estable para entregarlo de manera fiable como comisión.</p>
+        <p>El face modding sigue siendo experimental para mí, y no estoy en un nivel en el que me sienta cómodo cobrando por ello.</p>
+      </blockquote>
+      <h3 id="new-design">No puedo crear diseños completamente originales.</h3>
+      <blockquote>
+        <p>No puedo trabajar únicamente a partir de concept art o diseños personalizados puros. Como mínimo, se requiere un <strong>modelo extraído</strong> de otro juego.</p>
+        <p>Dicho esto, no necesita proporcionar el modelo extraído usted mismo. Generalmente localizo y extraigo el modelo por mi cuenta, por lo que solo le pido que <strong>confirme con precisión si existe tal modelo</strong>.</p>
+      </blockquote>
+      <h3 id="hair-mod">Los mods de cabello que puedo crear son muy limitados.</h3>
+      <blockquote>
+        <p>Si la fuente utiliza un <strong>mesh basado en Haircard</strong> de un juego relativamente reciente — como Stellar Blade o Mortal Kombat 1 — puedo producir excelentes resultados.</p>
+        <p>Sin embargo, los estilos de Hair Card más antiguos — como los de Tekken 7 o DOA5/6 — requieren diseñar un nuevo mesh de cabello completamente desde cero. Esto lleva demasiado tiempo, y no estoy seguro de poder entregar un resultado que valga la pena cobrar.</p>
+        <p>Tenga esto en cuenta cuando hablemos de su comisión.</p>
+      </blockquote>
+      <h3 id="stage-mod">Por el momento no puedo crear mods de escenario.</h3>
+      <blockquote>
+        <p>El stage modding es todavía un área en la que estoy experimentando y aprendiendo mucho.</p>
+        <p>En su lugar, planeo <strong>abrir comisiones de escenario por separado</strong> en el futuro — hasta entonces, no acepto solicitudes de comisiones de escenario.</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. Precios</h2>
+      <ul>
+        <li>En general, <strong>30–40 USD por mods de trajes/personajes</strong>, aunque el precio puede variar según el método y el tiempo requerido.</li>
+        <li>El precio exacto se determina de antemano, teniendo en cuenta el tiempo estimado y el método de producción.</li>
+        <li>El pago siempre se realiza una vez que determino que <strong>más de la mitad del trabajo está completado</strong>.</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. Sistema de cola de comisiones</h2>
+      <p>La cola de comisiones existente se volvió excesivamente larga, causando dificultades en el procesamiento.<br>
+      Para solucionar esto, estoy cambiando a un sistema de <strong>cola nueva corta y rotatoria</strong>.</p>
+      <blockquote>
+        <p><strong>Principio fundamental:</strong> La prioridad de la cola heredada está <strong>por encima de todo</strong>.</p>
+        <p>Quienes estén registrados en la cola heredada <strong>siempre tendrán prioridad sobre los nuevos solicitantes</strong>, independientemente del orden de solicitud.</p>
+      </blockquote>
+      <p>Los dos puntos clave son:</p>
+      <ul>
+        <li>La cola acepta solo un <strong>pequeño número</strong> de plazas a la vez, lo que permite una rotación más rápida.</li>
+        <li>La <strong>prioridad de los solicitantes anteriores se conserva por completo</strong>.</li>
+      </ul>
+      <h3 id="41-background">4.1 Contexto</h3>
+      <ul>
+        <li>La cola se hizo tan larga que muchas solicitudes llevan esperando de 6 meses a más de un año.</li>
+        <li>Las solicitudes más antiguas tienen más probabilidades de ser <strong>inalcanzables</strong>, lo que frecuentemente bloqueó el proceso incluso cuando intentaba proceder en orden.</li>
+        <li>Las nuevas solicitudes están actualmente cerradas, y en adelante operaré bajo el nuevo sistema descrito a continuación.</li>
+      </ul>
+      <h3 id="42-terminology">4.2 Terminología</h3>
+      <table>
+        <thead><tr><th>Término</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cola heredada</strong></td><td>La lista de solicitudes antiguas no procesadas enviadas bajo el sistema anterior. Se conserva y no se elimina.</td></tr>
+          <tr><td><strong>Cola nueva</strong></td><td>La cola corta y activa donde se procesa el trabajo real. Solo se aceptan pocas plazas por ronda, y el número se determina cada ronda.</td></tr>
+          <tr><td><strong>Beneficio de prioridad</strong></td><td>Un beneficio de uso único que permite a los registrados en la cola heredada posicionarse por delante de los nuevos solicitantes en la cola nueva. Se consume una vez utilizado.</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 Reglas de la cola nueva</h3>
+      <ul>
+        <li>La cola nueva opera con solo un <strong>pequeño número de plazas</strong>.</li>
+        <li>Se abre y cierra en ciclos cortos, manteniendo una rotación rápida.</li>
+        <li>Una vez completadas todas las comisiones activas, se abre la siguiente ronda. (→ <a href="#46-operating-cycle">4.6 Ciclo de funcionamiento</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>Nota — El número de plazas aceptadas no es fijo.</strong></p>
+        <p>El número «5» utilizado en este documento es puramente un <strong>ejemplo</strong>.</p>
+        <p>El número de plazas aceptadas por ronda puede ser <strong>tan pocas como 2 o 3</strong>, decidido de nuevo cada ronda.</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 Sistema de prioridad</h3>
+      <p>Tras abrir la cola nueva y recopilar las solicitudes, la prioridad se calcula de la siguiente manera.</p>
+      <p><strong>Paso 1 — Asignar clasificación base por orden de solicitud</strong><br>
+      Todas las solicitudes reciben una clasificación base según <strong>el orden en que fueron enviadas</strong>.</p>
+      <p><strong>Paso 2 — Aplicar la prioridad de la cola heredada (precedencia absoluta)</strong><br>
+      Cualquier solicitante que estuviera <strong>registrado en la cola heredada</strong> se mueve <strong>por encima de todos los nuevos solicitantes</strong>, independientemente de cuándo aplicaron.</p>
+      <ul>
+        <li>Los titulares de la cola heredada siempre <strong>tienen prioridad sobre los nuevos solicitantes</strong>.</li>
+        <li>Entre los titulares de la cola heredada, la clasificación se determina por su <strong>posición original en la cola heredada</strong>.</li>
+        <li>Entre los nuevos solicitantes, la clasificación se determina por el <strong>orden de solicitud</strong>.</li>
+      </ul>
+      <p>El orden final siempre es: <strong>[Titulares de la cola heredada (por clasificación original)] → [Nuevos solicitantes (por orden de solicitud)]</strong>.</p>
+      <p><strong>Paso 3 — Aceptar solo el número de plazas establecido para esa ronda</strong><br>
+      De la lista ordenada, <strong>solo se acepta el número de plazas establecido para esa ronda</strong>; el resto es rechazado para esta ronda.<br>
+      (El número de plazas no es fijo y varía cada ronda — véase la nota en <a href="#43-new-queue-rules">4.3 Reglas de la cola nueva</a>.)<br>
+      El rechazo es solo para la ronda actual; puede volver a solicitar en la siguiente ronda.</p>
+      <h3 id="45-priority-benefit">4.5 Beneficio de prioridad de la cola heredada</h3>
+      <ul>
+        <li>Quienes están en la cola heredada tienen <strong>garantizada una clasificación más alta</strong> al solicitar la cola nueva.</li>
+        <li>Sin embargo, en el momento en que sea <strong>oficialmente aceptado en la cola nueva</strong> gracias a este beneficio:
+          <ul>
+            <li>Es <strong>eliminado de la cola heredada</strong>.</li>
+            <li>El <strong>beneficio de prioridad también se consume</strong>. (Uso único)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>En otras palabras, la prioridad está garantizada «mientras permanezca en la cola heredada.» Una vez que pase a la cola nueva, será tratado igual que cualquier otro solicitante.</p>
+      <h3 id="46-operating-cycle">4.6 Ciclo de funcionamiento</h3>
+      <ol>
+        <li>La cola nueva se abre.</li>
+        <li>Se recopilan las solicitudes y se determinan las plazas aceptadas para esa ronda según el <a href="#44-priority-system">4.4 Sistema de prioridad</a>.</li>
+        <li>Se trabaja en las comisiones aceptadas.</li>
+        <li>Una vez que <strong>todo el trabajo activo esté completo</strong>, se vuelve al paso 1 y se abre la cola nueva de nuevo.</li>
+      </ol>
+      <p>Repetir este ciclo también va eliminando gradualmente la cola heredada.</p>
+      <h3 id="47-example">4.7 Ejemplo</h3>
+      <blockquote>
+        <p>El siguiente ejemplo asume que el número de plazas aceptadas para esta ronda es <strong>5</strong>.</p>
+        <p>Como se explicó anteriormente, este número no es fijo y puede variar — 2, 3, etc. — cada ronda.</p>
+      </blockquote>
+      <p>Supongamos que la cola nueva se abre y <strong>10 personas (A–J)</strong> solicitan en orden.<br>
+      Entre ellas, <strong>C, F y H</strong> estaban en la cola heredada, con clasificaciones heredadas de <strong>C (1.º) · F (2.º) · H (5.º)</strong>.</p>
+      <p><strong>Resultado del cálculo de prioridad:</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">Clasificación final</th><th style="text-align:center">Solicitante</th><th>Razón</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>Cola heredada — 1.º</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>Cola heredada — 2.º</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>Cola heredada — 5.º</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>Nuevo solicitante (solicitó primero)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>Nuevo solicitante</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>Nuevo solicitante — <strong>rechazado esta ronda</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Resultado (asumiendo 5 plazas aceptadas):</strong></p>
+      <ul>
+        <li>Los 5 primeros — <strong>C, F, H, A, B</strong> — son aceptados.</li>
+        <li>C, F y H han sido aceptados en la cola nueva → <strong>eliminados de la cola heredada + beneficio de prioridad consumido</strong>.</li>
+        <li>D, E, G, I, J son rechazados esta ronda (pueden volver a solicitar en la siguiente ronda).</li>
+        <li>Una vez completadas todas estas comisiones → se abre la cola de la siguiente ronda.</li>
+      </ul>
+      <blockquote>
+        <p>Si el número de plazas aceptadas para esta ronda fuera <strong>3</strong>, solo los 3 primeros — <strong>C, F, H</strong> — serían aceptados, y todos a partir de A serían rechazados.</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 Preguntas frecuentes (FAQ)</h3>
+      <p class="faq-q"><strong>P. Estoy en la cola heredada — ¿necesito solicitar la cola nueva por separado?</strong></p>
+      <p>Sí. Estar en la cola heredada no le avanza automáticamente. Debe solicitar cuando se abra la cola nueva, momento en el que se aplicará su beneficio de prioridad.</p>
+      <p class="faq-q"><strong>P. Si soy rechazado esta ronda, ¿desaparece mi prioridad de la cola heredada?</strong></p>
+      <p>No. El beneficio solo se consume <strong>cuando es oficialmente aceptado en la cola nueva</strong>. Si es rechazado, permanece en la cola heredada y puede usar el beneficio de nuevo en la siguiente ronda.</p>
+      <p class="faq-q"><strong>P. ¿Cuántas plazas se aceptan por ronda?</strong></p>
+      <p>No es fijo. Varía de ronda en ronda — típicamente entre 2 y 5.</p>
+      <p class="faq-q"><strong>P. ¿Cuándo se vaciará completamente la cola heredada?</strong></p>
+      <p>Se irá vaciando gradualmente a lo largo de rondas sucesivas. Sin embargo, las solicitudes donde el solicitante no puede ser contactado pueden retrasarse.</p>
+      <hr>
+      <p><em>Última actualización: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

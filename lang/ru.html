@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>UMIN Commission Guide</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.15rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1rem; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.75; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.75; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.4rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0.05rem; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>Руководство по заказу</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="./fr.html">Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="./it.html">Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="" selected>Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>Вступить на сервер</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">Содержание</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">Предварительные условия</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">Что я не могу сделать</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">Стоимость</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">Система очереди заказов</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">Предыстория</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">Терминология</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">Правила новой очереди</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">Система приоритетов</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">Привилегия приоритета старой очереди</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">Рабочий цикл</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">Пример</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">Часто задаваемые вопросы</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>Этот документ объясняет предварительные условия для заказов, объём работы, которую я не могу выполнить, стоимость, а также как работает система подачи заявок и очереди.</p>
+        <p>Пожалуйста, прочитайте это перед подачей заявки на заказ — это значительно упростит процесс.</p>
+        <p>Обратите внимание, что, хотя этот документ доступен на нескольких языках, <strong>всё общение в ходе работы над заказом ведётся исключительно на английском языке</strong>.</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. Предварительные условия</h2>
+      <ul>
+        <li>Все заказные моды всегда <strong>распространяются одинаково</strong>, как и другие моды, выпущенные на моём Patreon.<br>
+          Это означает, что <strong>приватные заказы невозможны</strong>. Все заказы сначала выпускаются как ранний доступ, а затем становятся общедоступными — так же, как и любой другой мод.</li>
+        <li><strong>NSFW-моды недоступны.</strong><br>
+          Максимально допустимый уровень откровенности — как в Dead or Alive или The First Descendant.<br>
+          Изображение мужских или женских гениталий <strong>абсолютно невозможно ни при каких обстоятельствах</strong>.<br>
+          (Кроме того, откровенные NSFW-изображения также являются уголовным преступлением в Южной Корее.)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. Что я не могу сделать</h2>
+      <h3 id="facial-expressions">Я не могу создавать моды для лица с рабочей мимикой.</h3>
+      <blockquote>
+        <p>Я способен делать моды для лица, но у меня пока нет стабильного рабочего процесса для надёжной реализации этого в качестве заказа.</p>
+        <p>Мод лица для меня всё ещё экспериментален, и я не чувствую себя уверенно, берясь за это за плату.</p>
+      </blockquote>
+      <h3 id="new-design">Я не могу создавать полностью оригинальные дизайны.</h3>
+      <blockquote>
+        <p>Я не могу работать только с концептуальным артом или чисто кастомными дизайнами. Как минимум необходима <strong>извлечённая модель</strong> из другой игры.</p>
+        <p>При этом вам не нужно предоставлять извлечённую модель самостоятельно. Как правило, я сам нахожу и извлекаю модель, поэтому всё, о чём я прошу — это <strong>точно подтвердить, существует ли такая модель</strong>.</p>
+      </blockquote>
+      <h3 id="hair-mod">Моды для волос, которые я могу создать, очень ограничены.</h3>
+      <blockquote>
+        <p>Если источник использует <strong>сетку на основе Haircard</strong> из относительно новой игры — например, Stellar Blade или Mortal Kombat 1 — я могу получить отличный результат.</p>
+        <p>Однако более старые стили Hair Card — например, в Tekken 7 или DOA5/6 — требуют создания полностью новой сетки волос с нуля. Это занимает слишком много времени, и я не уверен, что смогу предоставить результат, достойный оплаты.</p>
+        <p>Пожалуйста, имейте это в виду при обсуждении вашего заказа со мной.</p>
+      </blockquote>
+      <h3 id="stage-mod">В настоящее время я не могу создавать моды для арен.</h3>
+      <blockquote>
+        <p>Создание модов для арен всё ещё имеет много вещей, которые я экспериментирую и изучаю.</p>
+        <p>Вместо этого я планирую <strong>открыть заказы на арены отдельно</strong> в будущем — до тех пор я не принимаю такие заказы.</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. Стоимость</h2>
+      <ul>
+        <li>Как правило, <strong>30–40 USD за моды одежды/персонажей</strong>, хотя цена может варьироваться в зависимости от метода и затраченного времени.</li>
+        <li>Точная цена определяется заранее с учётом предполагаемого времени и метода выполнения.</li>
+        <li>Оплата всегда производится, когда я определяю, что <strong>более половины работы выполнено</strong>.</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. Система очереди заказов</h2>
+      <p>Существующая очередь заказов стала чрезмерно длинной, что вызвало трудности с обработкой.<br>
+      Для решения этой проблемы я перехожу на систему <strong>короткой ротационной новой очереди</strong>.</p>
+      <blockquote>
+        <p><strong>Основной принцип:</strong> Приоритет старой очереди стоит <strong>превыше всего</strong>.</p>
+        <p>Зарегистрированные в старой очереди <strong>всегда будут иметь приоритет перед новыми заявителями</strong>, независимо от порядка подачи заявок.</p>
+      </blockquote>
+      <p>Два ключевых момента:</p>
+      <ul>
+        <li>Очередь принимает только <strong>небольшое количество</strong> слотов за раз, что позволяет ускорить оборот.</li>
+        <li><strong>Приоритет предыдущих заявителей полностью сохраняется</strong>.</li>
+      </ul>
+      <h3 id="41-background">4.1 Предыстория</h3>
+      <ul>
+        <li>Очередь стала настолько длинной, что многие заявки ждут уже от 6 месяцев до года и более.</li>
+        <li>Более старые заявки чаще оказываются <strong>недоступными</strong>, что нередко останавливало процесс даже при попытке работать по порядку.</li>
+        <li>Новые заявки сейчас закрыты, и в дальнейшем я буду работать по новой системе, описанной ниже.</li>
+      </ul>
+      <h3 id="42-terminology">4.2 Терминология</h3>
+      <table>
+        <thead><tr><th>Термин</th><th>Значение</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Старая очередь</strong></td><td>Список старых необработанных заявок, поданных в рамках предыдущей системы. Она сохраняется и не удаляется.</td></tr>
+          <tr><td><strong>Новая очередь</strong></td><td>Короткая активная очередь, в которой выполняется реальная работа. За один раунд принимается лишь небольшое количество слотов, и их число определяется каждый раунд.</td></tr>
+          <tr><td><strong>Привилегия приоритета</strong></td><td>Одноразовая привилегия, позволяющая зарегистрированным в старой очереди занимать более высокое место перед новыми заявителями в новой очереди. Используется один раз.</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 Правила новой очереди</h3>
+      <ul>
+        <li>Новая очередь работает только с <strong>небольшим количеством слотов</strong>.</li>
+        <li>Она открывается и закрывается в короткие циклы, обеспечивая быстрый оборот.</li>
+        <li>После завершения всех активных заказов открывается следующий раунд. (→ <a href="#46-operating-cycle">4.6 Рабочий цикл</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>Примечание — Количество принимаемых слотов не фиксировано.</strong></p>
+        <p>Число "5", используемое в этом документе, является исключительно <strong>примером</strong>.</p>
+        <p>Количество слотов, принимаемых за раунд, может быть <strong>всего 2 или 3</strong>, и определяется заново каждый раунд.</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 Система приоритетов</h3>
+      <p>После открытия новой очереди и сбора заявок приоритет рассчитывается следующим образом.</p>
+      <p><strong>Шаг 1 — Присвоение базового рейтинга по порядку подачи заявок</strong><br>
+      Все заявки получают базовый рейтинг на основе <strong>порядка их подачи</strong>.</p>
+      <p><strong>Шаг 2 — Применение приоритета старой очереди (абсолютный приоритет)</strong><br>
+      Любой заявитель, <strong>зарегистрированный в старой очереди</strong>, перемещается <strong>выше всех новых заявителей</strong>, независимо от времени подачи заявки.</p>
+      <ul>
+        <li>Держатели старой очереди всегда <strong>имеют приоритет перед новыми заявителями</strong>.</li>
+        <li>Среди держателей старой очереди рейтинг определяется их <strong>исходной позицией в старой очереди</strong>.</li>
+        <li>Среди новых заявителей рейтинг определяется <strong>порядком подачи заявок</strong>.</li>
+      </ul>
+      <p>Итоговый порядок всегда: <strong>[Держатели старой очереди (по исходному рейтингу)] → [Новые заявители (по порядку подачи заявок)]</strong>.</p>
+      <p><strong>Шаг 3 — Принять только количество слотов, установленное для данного раунда</strong><br>
+      Из отсортированного списка принимается <strong>только число слотов, установленное для данного раунда</strong>; остальные отклоняются в этом раунде.<br>
+      (Количество слотов не фиксировано и меняется каждый раунд — см. примечание в <a href="#43-new-queue-rules">4.3 Правила новой очереди</a>.)<br>
+      Отклонение действует только для текущего раунда; вы можете подать заявку снова в следующем раунде.</p>
+      <h3 id="45-priority-benefit">4.5 Привилегия приоритета старой очереди</h3>
+      <ul>
+        <li>Те, кто находится в старой очереди, <strong>гарантированно получают более высокий рейтинг</strong> при подаче заявки в новую очередь.</li>
+        <li>Однако в момент, когда вы <strong>официально принимаетесь в новую очередь</strong> через эту привилегию:
+          <ul>
+            <li>Вы <strong>удаляетесь из старой очереди</strong>.</li>
+            <li><strong>Привилегия приоритета также используется</strong>. (Одноразовое использование)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Иными словами, приоритет гарантируется «пока вы остаётесь в старой очереди». Как только вы переходите в новую очередь, вы рассматриваетесь наравне с другими заявителями.</p>
+      <h3 id="46-operating-cycle">4.6 Рабочий цикл</h3>
+      <ol>
+        <li>Новая очередь открывается.</li>
+        <li>Заявки собираются, и принятые слоты для данного раунда определяются согласно <a href="#44-priority-system">4.4 Система приоритетов</a>.</li>
+        <li>Принятые заказы выполняются.</li>
+        <li>После <strong>завершения всей активной работы</strong> возвращайтесь к шагу 1 и снова открывайте новую очередь.</li>
+      </ol>
+      <p>Повторение этого цикла постепенно очищает и старую очередь.</p>
+      <h3 id="47-example">4.7 Пример</h3>
+      <blockquote>
+        <p>Приведённый ниже пример предполагает, что количество принятых слотов в раунде равно <strong>5</strong>.</p>
+        <p>Как объяснялось ранее, это число не фиксировано и может варьироваться — 2, 3 и т.д. — каждый раунд.</p>
+      </blockquote>
+      <p>Предположим, что новая очередь открылась и <strong>10 человек (A–J)</strong> подали заявки по порядку.<br>
+      Среди них <strong>C, F и H</strong> были в старой очереди, с позициями <strong>C (1-я) · F (2-я) · H (5-я)</strong>.</p>
+      <p><strong>Результат расчёта приоритета:</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">Итоговый рейтинг</th><th style="text-align:center">Заявитель</th><th>Причина</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>Старая очередь — 1-я</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>Старая очередь — 2-я</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>Старая очередь — 5-я</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>Новый заявитель (подал заявку первым)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>Новый заявитель</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>Новый заявитель — <strong>отклонён в этом раунде</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Результат (при условии 5 принятых слотов):</strong></p>
+      <ul>
+        <li>Первые 5 — <strong>C, F, H, A, B</strong> — приняты.</li>
+        <li>C, F и H были приняты в новую очередь → <strong>удалены из старой очереди + привилегия приоритета использована</strong>.</li>
+        <li>D, E, G, I, J отклонены в этом раунде (могут подать заявку снова в следующем раунде).</li>
+        <li>После завершения всех этих заказов → открывается очередь следующего раунда.</li>
+      </ul>
+      <blockquote>
+        <p>Если бы количество принятых слотов в этом раунде составляло <strong>3</strong>, были бы приняты только первые 3 — <strong>C, F, H</strong>, а все начиная с A были бы отклонены.</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 Часто задаваемые вопросы</h3>
+      <p class="faq-q"><strong>В. Я в старой очереди — нужно ли мне отдельно подавать заявку в новую очередь?</strong></p>
+      <p>Да. Нахождение в старой очереди не продвигает вас автоматически. Вы должны подать заявку, когда откроется новая очередь, и тогда будет применена ваша привилегия приоритета.</p>
+      <p class="faq-q"><strong>В. Если меня отклонят в этом раунде, исчезнет ли мой приоритет в старой очереди?</strong></p>
+      <p>Нет. Привилегия используется только <strong>при официальном принятии в новую очередь</strong>. При отклонении вы остаётесь в старой очереди и можете снова воспользоваться привилегией в следующем раунде.</p>
+      <p class="faq-q"><strong>В. Сколько слотов принимается за раунд?</strong></p>
+      <p>Не фиксировано. Варьируется от раунда к раунду — обычно от 2 до 5.</p>
+      <p class="faq-q"><strong>В. Когда старая очередь будет полностью закрыта?</strong></p>
+      <p>Она будет постепенно очищаться в ходе последовательных раундов. Однако заявки, где с заявителем невозможно связаться, могут быть задержаны.</p>
+      <hr>
+      <p><em>Last updated: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>

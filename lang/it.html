@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Guida alle Commissioni UMIN</title>
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-weight: 400; font-family: "Noto Sans", sans-serif; }
+    h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.15rem; margin: 2.5rem 0 0.5rem; text-shadow: 0.15rem 0.15rem 0 rgba(77,73,62,0.25); border-bottom: 2px solid rgba(77,73,62,0.35); padding-bottom: 0.4rem; }
+    h3 { font-size: 1rem; font-weight: 600; letter-spacing: 0.1rem; margin: 1.5rem 0 0.4rem; border-left: 3px solid rgba(77,73,62,0.5); padding-left: 0.6rem; }
+    p { margin: 0.5rem 0; line-height: 1.75; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin: 0.4rem 0; line-height: 1.75; }
+    blockquote { border-left: 3px solid #4D493E; margin: 1rem 0; padding: 0.5rem 1rem; background-color: rgba(77,73,62,0.13); }
+    blockquote p { margin: 0.2rem 0; }
+    hr { border: none; border-top: 2px solid rgba(77,73,62,0.35); margin: 2rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid rgba(77,73,62,0.4); padding: 0.45rem 0.8rem; text-align: left; line-height: 1.6; }
+    th { background-color: rgba(77,73,62,0.12); font-weight: 500; }
+    a { color: #4D493E; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(77,73,62,0.5); }
+    a:hover { text-decoration-color: #4D493E; }
+    .doc-button-area { margin-bottom: 2rem; }
+    .faq-q { margin-top: 1.2rem; }
+    .toc table { width: auto; min-width: 300px; margin: 1.5rem 0 0; border: 2px solid rgba(77,73,62,0.6); box-shadow: 3px 3px 0 rgba(77,73,62,0.35); }
+    .toc thead th { background-color: rgba(77,73,62,0.22); text-align: center; letter-spacing: 0.4rem; font-size: 0.9rem; padding: 0.4rem 1.2rem; border-bottom: 2px solid rgba(77,73,62,0.5); }
+    .toc .toc-num { white-space: nowrap; font-weight: 500; text-align: center; width: 3.5rem; }
+    .toc .toc-sub-num { font-weight: 300; color: rgba(77,73,62,0.45); font-size: 0.83em; }
+    .toc .toc-sub-title { padding-left: 1.8rem !important; font-size: 0.87em; color: rgba(77,73,62,0.7); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) { background-color: rgba(77,73,62,0.11); }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td { font-weight: 600; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .header-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .lang-select { font: inherit; font-size: 0.82rem; background-color: rgba(77,73,62,0.15); color: #4D493E; border: 1px solid rgba(77,73,62,0.5); padding: 0.25rem 0.4rem; cursor: pointer; letter-spacing: 0.05rem; margin-bottom: 0.55rem; }
+    .lang-select:hover, .lang-select:focus { background-color: rgba(77,73,62,0.25); outline: none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+  <div class="container header-inner">
+    <h1><span><b>Guida alle Commissioni</b></span></h1>
+    <select class="lang-select" onchange="if(this.value) location.href=this.value">
+      <option value="../index.html">한국어</option>
+      <option value="./en.html">English</option>
+      <option value="./fr.html">Français</option>
+      <option value="./de.html">Deutsch</option>
+      <option value="./es.html">Español</option>
+      <option value="" selected>Italiano</option>
+      <option value="./pt.html">Português</option>
+      <option value="./ru.html">Русский</option>
+      <option value="./pl.html">Polski</option>
+      <option value="./ar.html">العربية</option>
+      <option value="./ja.html">日本語</option>
+      <option value="./zh-hans.html">简体中文</option>
+      <option value="./zh-hant.html">繁體中文</option>
+      <option value="./th.html">ภาษาไทย</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="doc-button-area">
+        <button type="button" onclick="location.href='https://discord.gg/tjSuuHqHTG'"><b>Unisciti al server</b></button>
+      </div>
+      <nav class="toc">
+        <table>
+          <thead><tr><th colspan="2">Indice</th></tr></thead>
+          <tbody>
+            <tr><td class="toc-num">1</td><td><a href="#1-prerequisites">Prerequisiti</a></td></tr>
+            <tr><td class="toc-num">2</td><td><a href="#2-what-i-cant-do">Cosa non posso fare</a></td></tr>
+            <tr><td class="toc-num">3</td><td><a href="#3-pricing">Prezzi</a></td></tr>
+            <tr><td class="toc-num">4</td><td><a href="#4-queue-system">Sistema di coda commissioni</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.1</td><td class="toc-sub-title"><a href="#41-background">Contesto</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.2</td><td class="toc-sub-title"><a href="#42-terminology">Terminologia</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.3</td><td class="toc-sub-title"><a href="#43-new-queue-rules">Regole della nuova coda</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.4</td><td class="toc-sub-title"><a href="#44-priority-system">Sistema di priorità</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.5</td><td class="toc-sub-title"><a href="#45-priority-benefit">Vantaggio priorità della coda legacy</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.6</td><td class="toc-sub-title"><a href="#46-operating-cycle">Ciclo operativo</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.7</td><td class="toc-sub-title"><a href="#47-example">Esempio</a></td></tr>
+            <tr><td class="toc-num toc-sub-num">4.8</td><td class="toc-sub-title"><a href="#48-faq">Domande frequenti (FAQ)</a></td></tr>
+          </tbody>
+        </table>
+      </nav>
+      <blockquote>
+        <p>Questo documento spiega i prerequisiti per le commissioni, cosa non posso fare, i prezzi e come funziona il sistema di candidatura e coda.</p>
+        <p>Si prega di leggerlo prima di inviare una richiesta di commissione — renderà il processo molto più agevole.</p>
+        <p>Si prega di notare che, sebbene questo documento sia disponibile in più lingue, <strong>tutte le comunicazioni durante il lavoro di commissione vengono condotte esclusivamente in inglese</strong>.</p>
+      </blockquote>
+      <hr>
+      <h2 id="1-prerequisites">1. Prerequisiti</h2>
+      <ul>
+        <li>Tutti i mod commissionati vengono sempre <strong>distribuiti nello stesso modo</strong> degli altri mod pubblicati sul mio Patreon.<br>
+          Ciò significa che <strong>le commissioni private non sono possibili</strong>. Tutte le commissioni vengono prima pubblicate come accesso anticipato, poi rese pubbliche — come qualsiasi altro mod.</li>
+        <li><strong>I mod NSFW non sono disponibili.</strong><br>
+          Il livello di esposizione di Dead or Alive o The First Descendant è il massimo consentito.<br>
+          La raffigurazione di genitali maschili o femminili è <strong>assolutamente impossibile in qualsiasi circostanza</strong>.<br>
+          (Come nota a margine, le rappresentazioni NSFW esplicite costituiscono anche un reato penale in Corea del Sud.)</li>
+      </ul>
+      <hr>
+      <h2 id="2-what-i-cant-do">2. Cosa non posso fare</h2>
+      <h3 id="facial-expressions">Non posso creare mod facciali con espressioni facciali funzionanti.</h3>
+      <blockquote>
+        <p>Sono in grado di fare face modding, ma non ho ancora un flusso di lavoro stabile per consegnarlo in modo affidabile come commissione.</p>
+        <p>Il face modding è ancora sperimentale per me, e non sono a un livello in cui mi senta a mio agio nel farlo pagare.</p>
+      </blockquote>
+      <h3 id="new-design">Non posso creare design completamente originali.</h3>
+      <blockquote>
+        <p>Non posso lavorare solo da concept art o design personalizzati puri. Come minimo, è necessario un <strong>modello estratto</strong> da un altro gioco.</p>
+        <p>Detto questo, non è necessario fornire il modello estratto da soli. Di solito localizzo ed estraggo il modello autonomamente, quindi chiedo solo di <strong>confermare con precisione se esiste un tale modello</strong>.</p>
+      </blockquote>
+      <h3 id="hair-mod">I mod per capelli che posso creare sono molto limitati.</h3>
+      <blockquote>
+        <p>Se la fonte utilizza un <strong>mesh basato su Haircard</strong> da un gioco relativamente recente — come Stellar Blade o Mortal Kombat 1 — posso produrre ottimi risultati.</p>
+        <p>Tuttavia, gli stili Hair Card più vecchi — come quelli di Tekken 7 o DOA5/6 — richiedono la progettazione di un nuovo mesh per capelli completamente da zero. Questo richiede troppo tempo, e non sono sicuro di poter consegnare un risultato che valga la pena far pagare.</p>
+        <p>Tenetelo a mente quando discutete la vostra commissione con me.</p>
+      </blockquote>
+      <h3 id="stage-mod">Al momento non posso creare mod di palcoscenico.</h3>
+      <blockquote>
+        <p>Lo stage modding è ancora un'area in cui sto sperimentando e imparando molto.</p>
+        <p>Invece, ho intenzione di <strong>aprire commissioni di palcoscenico separatamente</strong> in futuro — fino ad allora, non accetto richieste di commissioni di palcoscenico.</p>
+      </blockquote>
+      <hr>
+      <h2 id="3-pricing">3. Prezzi</h2>
+      <ul>
+        <li>In generale, <strong>30–40 USD per mod di costumi/personaggi</strong>, anche se il prezzo può variare a seconda del metodo e del tempo richiesto.</li>
+        <li>Il prezzo esatto viene determinato in anticipo, tenendo conto del tempo stimato e del metodo di produzione.</li>
+        <li>Il pagamento viene sempre effettuato una volta che determino che <strong>più della metà del lavoro è completata</strong>.</li>
+      </ul>
+      <hr>
+      <h2 id="4-queue-system">4. Sistema di coda commissioni</h2>
+      <p>La coda commissioni esistente è diventata eccessivamente lunga, causando difficoltà nell'elaborazione.<br>
+      Per risolvere questo problema, sto passando a un sistema con una <strong>nuova coda breve e rotatoria</strong>.</p>
+      <blockquote>
+        <p><strong>Principio fondamentale:</strong> La priorità della coda legacy è <strong>al di sopra di tutto</strong>.</p>
+        <p>Coloro che sono registrati nella coda legacy <strong>avranno sempre la precedenza sui nuovi candidati</strong>, indipendentemente dall'ordine di candidatura.</p>
+      </blockquote>
+      <p>I due punti chiave sono:</p>
+      <ul>
+        <li>La coda accetta solo un <strong>piccolo numero</strong> di posti alla volta, consentendo una rotazione più rapida.</li>
+        <li>La <strong>priorità dei candidati precedenti è completamente preservata</strong>.</li>
+      </ul>
+      <h3 id="41-background">4.1 Contesto</h3>
+      <ul>
+        <li>La coda è diventata così lunga che molte richieste sono in attesa da 6 mesi a oltre un anno.</li>
+        <li>Le richieste più vecchie hanno maggiori probabilità di essere <strong>irraggiungibili</strong>, il che ha spesso bloccato il processo anche quando cercavo di procedere in ordine.</li>
+        <li>Le nuove candidature sono attualmente chiuse, e d'ora in poi opererò secondo il nuovo sistema descritto di seguito.</li>
+      </ul>
+      <h3 id="42-terminology">4.2 Terminologia</h3>
+      <table>
+        <thead><tr><th>Termine</th><th>Significato</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Coda legacy</strong></td><td>L'elenco delle vecchie richieste non elaborate inviate sotto il sistema precedente. Viene conservata e non eliminata.</td></tr>
+          <tr><td><strong>Nuova coda</strong></td><td>La coda breve e attiva in cui viene elaborato il lavoro reale. Vengono accettati solo pochi posti per round, e il numero viene determinato ogni round.</td></tr>
+          <tr><td><strong>Vantaggio priorità</strong></td><td>Un vantaggio a uso singolo che consente ai registrati nella coda legacy di posizionarsi davanti ai nuovi candidati nella nuova coda. Viene consumato una volta utilizzato.</td></tr>
+        </tbody>
+      </table>
+      <h3 id="43-new-queue-rules">4.3 Regole della nuova coda</h3>
+      <ul>
+        <li>La nuova coda opera con solo un <strong>piccolo numero di posti</strong>.</li>
+        <li>Si apre e si chiude in cicli brevi, mantenendo una rotazione rapida.</li>
+        <li>Una volta completate tutte le commissioni attive, si apre il round successivo. (→ <a href="#46-operating-cycle">4.6 Ciclo operativo</a>)</li>
+      </ul>
+      <blockquote>
+        <p><strong>Nota — Il numero di posti accettati non è fisso.</strong></p>
+        <p>Il numero «5» utilizzato in questo documento è puramente un <strong>esempio</strong>.</p>
+        <p>Il numero di posti accettati per round può essere <strong>anche solo 2 o 3</strong>, deciso di nuovo ogni round.</p>
+      </blockquote>
+      <h3 id="44-priority-system">4.4 Sistema di priorità</h3>
+      <p>Dopo l'apertura della nuova coda e la raccolta delle candidature, la priorità viene calcolata come segue.</p>
+      <p><strong>Fase 1 — Assegnare la classificazione base in base all'ordine di candidatura</strong><br>
+      Tutte le candidature ricevono una classificazione base basata su <strong>l'ordine in cui sono state inviate</strong>.</p>
+      <p><strong>Fase 2 — Applicare la priorità della coda legacy (precedenza assoluta)</strong><br>
+      Qualsiasi candidato che era <strong>registrato nella coda legacy</strong> viene spostato <strong>al di sopra di tutti i nuovi candidati</strong>, indipendentemente da quando hanno fatto domanda.</p>
+      <ul>
+        <li>I titolari della coda legacy <strong>hanno sempre la precedenza sui nuovi candidati</strong>.</li>
+        <li>Tra i titolari della coda legacy, la classificazione è determinata dalla loro <strong>posizione originale nella coda legacy</strong>.</li>
+        <li>Tra i nuovi candidati, la classificazione è determinata dall'<strong>ordine di candidatura</strong>.</li>
+      </ul>
+      <p>L'ordine finale è sempre: <strong>[Titolari della coda legacy (per classificazione originale)] → [Nuovi candidati (per ordine di candidatura)]</strong>.</p>
+      <p><strong>Fase 3 — Accettare solo il numero di posti stabilito per quel round</strong><br>
+      Dalla lista ordinata, vengono accettati <strong>solo il numero di posti stabilito per quel round</strong>; il resto viene rifiutato per questo round.<br>
+      (Il numero di posti non è fisso e varia ogni round — vedere la nota in <a href="#43-new-queue-rules">4.3 Regole della nuova coda</a>.)<br>
+      Il rifiuto riguarda solo il round corrente; è possibile fare nuovamente domanda nel round successivo.</p>
+      <h3 id="45-priority-benefit">4.5 Vantaggio priorità della coda legacy</h3>
+      <ul>
+        <li>Coloro che sono nella coda legacy hanno <strong>garantita una classificazione più alta</strong> quando fanno domanda per la nuova coda.</li>
+        <li>Tuttavia, nel momento in cui si viene <strong>ufficialmente accettati nella nuova coda</strong> grazie a questo vantaggio:
+          <ul>
+            <li>Si viene <strong>rimossi dalla coda legacy</strong>.</li>
+            <li>Il <strong>vantaggio priorità viene anch'esso consumato</strong>. (Uso singolo)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>In altre parole, la priorità è garantita «finché si rimane nella coda legacy.» Una volta che si passa alla nuova coda, si viene trattati come qualsiasi altro candidato.</p>
+      <h3 id="46-operating-cycle">4.6 Ciclo operativo</h3>
+      <ol>
+        <li>La nuova coda si apre.</li>
+        <li>Le candidature vengono raccolte e i posti accettati per quel round vengono determinati secondo il <a href="#44-priority-system">4.4 Sistema di priorità</a>.</li>
+        <li>Si lavora sulle commissioni accettate.</li>
+        <li>Una volta che <strong>tutto il lavoro attivo è completato</strong>, si torna al passo 1 e si riapre la nuova coda.</li>
+      </ol>
+      <p>Ripetendo questo ciclo, anche la coda legacy viene gradualmente svuotata.</p>
+      <h3 id="47-example">4.7 Esempio</h3>
+      <blockquote>
+        <p>L'esempio seguente assume che il numero di posti accettati per questo round sia <strong>5</strong>.</p>
+        <p>Come spiegato in precedenza, questo numero non è fisso e può variare — 2, 3, ecc. — ogni round.</p>
+      </blockquote>
+      <p>Si supponga che la nuova coda si apra e <strong>10 persone (A–J)</strong> facciano domanda in ordine.<br>
+      Tra di esse, <strong>C, F e H</strong> erano nella coda legacy, con classificazioni legacy di <strong>C (1°) · F (2°) · H (5°)</strong>.</p>
+      <p><strong>Risultato del calcolo della priorità:</strong></p>
+      <table>
+        <thead><tr><th style="text-align:center">Classificazione finale</th><th style="text-align:center">Candidato</th><th>Motivo</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center">1</td><td style="text-align:center">C</td><td>Coda legacy — 1°</td></tr>
+          <tr><td style="text-align:center">2</td><td style="text-align:center">F</td><td>Coda legacy — 2°</td></tr>
+          <tr><td style="text-align:center">3</td><td style="text-align:center">H</td><td>Coda legacy — 5°</td></tr>
+          <tr><td style="text-align:center">4</td><td style="text-align:center">A</td><td>Nuovo candidato (ha fatto domanda per primo)</td></tr>
+          <tr><td style="text-align:center">5</td><td style="text-align:center">B</td><td>Nuovo candidato</td></tr>
+          <tr><td style="text-align:center">6~</td><td style="text-align:center">D, E, G, I, J</td><td>Nuovo candidato — <strong>rifiutato questo round</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Risultato (assumendo 5 posti accettati):</strong></p>
+      <ul>
+        <li>I primi 5 — <strong>C, F, H, A, B</strong> — sono accettati.</li>
+        <li>C, F e H sono stati accettati nella nuova coda → <strong>rimossi dalla coda legacy + vantaggio priorità consumato</strong>.</li>
+        <li>D, E, G, I, J sono rifiutati questo round (possono fare nuovamente domanda nel round successivo).</li>
+        <li>Una volta completate tutte queste commissioni → si apre la coda del round successivo.</li>
+      </ul>
+      <blockquote>
+        <p>Se il numero di posti accettati per questo round fosse stato <strong>3</strong>, solo i primi 3 — <strong>C, F, H</strong> — sarebbero stati accettati, e tutti a partire da A sarebbero stati rifiutati.</p>
+      </blockquote>
+      <h3 id="48-faq">4.8 Domande frequenti (FAQ)</h3>
+      <p class="faq-q"><strong>D. Sono nella coda legacy — devo fare domanda separatamente per la nuova coda?</strong></p>
+      <p>Sì. Essere nella coda legacy non fa avanzare automaticamente. È necessario fare domanda quando si apre la nuova coda, momento in cui verrà applicato il vantaggio priorità.</p>
+      <p class="faq-q"><strong>D. Se vengo rifiutato questo round, scompare la mia priorità della coda legacy?</strong></p>
+      <p>No. Il vantaggio viene consumato solo <strong>quando si viene ufficialmente accettati nella nuova coda</strong>. Se rifiutati, si rimane nella coda legacy e si può usare il vantaggio nuovamente nel round successivo.</p>
+      <p class="faq-q"><strong>D. Quanti posti vengono accettati per round?</strong></p>
+      <p>Non è fisso. Varia di round in round — tipicamente tra 2 e 5.</p>
+      <p class="faq-q"><strong>D. Quando verrà svuotata completamente la coda legacy?</strong></p>
+      <p>Verrà gradualmente svuotata nel corso di round successivi. Tuttavia, le richieste in cui il candidato non può essere raggiunto potrebbero subire ritardi.</p>
+      <hr>
+      <p><em>Ultimo aggiornamento: 2026-06-09</em></p>
+    </div>
+  </div>
+</main>
+<div class="pattern"><div class="container"><div class="pattern-inner"></div></div></div>
+</body>
+</html>
