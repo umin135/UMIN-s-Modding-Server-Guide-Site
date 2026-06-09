@@ -98,12 +98,19 @@
     }
     .toc .toc-sub-num {
       font-weight: 300;
-      color: rgba(77, 73, 62, 0.6);
-      font-size: 0.9em;
+      color: rgba(77, 73, 62, 0.45);
+      font-size: 0.83em;
     }
     .toc .toc-sub-title {
       padding-left: 1.8rem !important;
-      font-size: 0.93em;
+      font-size: 0.87em;
+      color: rgba(77, 73, 62, 0.7);
+    }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) {
+      background-color: rgba(77, 73, 62, 0.11);
+    }
+    .toc tr:has(.toc-num:not(.toc-sub-num)) td {
+      font-weight: 600;
     }
     .toc a {
       text-decoration: none;
